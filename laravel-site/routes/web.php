@@ -21,4 +21,10 @@ Route::get('/products', function () {
     return view('products');
 });
 
+Route::get('/products/{id}', function ($id) {
+    return view('show', ['id' => $id]);
+});
+
+
+
 
