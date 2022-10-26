@@ -3,7 +3,7 @@
 <?php
 class Account{
     private $Name = "Sam";
-    private $AccountType = "Customer";
+    private $AccountType = "Customer";  /* Testing Information */
     private $Password = "hashThis";
     private $Phone = "07000000000";
     private $Email = "210028353@aston.ac.uk";
@@ -14,6 +14,8 @@ class Account{
         $this->Password = $Password;
         $this->Email = $Email;
     }
+
+    /* Need HTML form inputs to populate variables */
 
 }
 
