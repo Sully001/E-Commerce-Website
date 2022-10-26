@@ -1,1 +1,5 @@
-<h1>This will be the products page</h1>
+@extends('layouts.layout')
+
+@section('content')
+<h1>This will show all products on the page</h1>
+@endsection
