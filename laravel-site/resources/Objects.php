@@ -62,9 +62,10 @@ Class Order{
 		{
 		 $items -> append($item);
 		}
-		public removeItem()
+		public removeItem($item)
 		{
-			
+		 $removeArray = array($item);
+		 $items = array_diff($items, $removeArray);
 		}
 	}
 }

@@ -57,6 +57,15 @@ Class Order{
 		$this->customer = $customer;
 		$this->orderNum = $orderNum;
 		$items = array(100);
+		
+		public addItem($item)
+		{
+		 $items -> append($item);
+		}
+		public removeItem()
+		{
+			
+		}
 	}
 }
 
