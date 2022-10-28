@@ -2,11 +2,12 @@
 --INCOMPLETE--
 <?php
 class Account{
-    private $Name = "Sam";
-    private $AccountType = "Customer";  /* Testing Information */
-    private $Password = "hashThis";
-    private $Phone = "07000000000";
-    private $Email = "210028353@aston.ac.uk";
+    private $Name;
+    private $AccountType;  /* Testing Information */
+    private $Password;
+    private $Phone;
+    private $Email;
+    /* Need HTML form inputs to populate variables */
 
     function __construct($Name, $AccountType, $Password, $Email) {
         $this->Name = $Name;
@@ -14,8 +15,22 @@ class Account{
         $this->Password = $Password;
         $this->Email = $Email;
     }
+    
+    function getName() {
 
-    /* Need HTML form inputs to populate variables */
+    }
+
+    function getAccountType() {
+
+    }
+
+    function getPhone() {
+
+    }
+
+    function getEmail() {
+        
+    }
 
 }
 
