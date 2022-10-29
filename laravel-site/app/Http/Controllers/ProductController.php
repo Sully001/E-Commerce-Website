@@ -12,7 +12,7 @@ class ProductController extends Controller
     //to the views.
     public function index() {
         $products = Product::all();
-        return view('products', [
+        return view('index', [
             'products' => $products,
         ]);
     }
@@ -20,8 +20,8 @@ class ProductController extends Controller
     //This method gets a single product from the database using the id or Product number.
     public function show($id) {
         $product = Product::findorFail($id);
-        return view('/products/{id}', [
-            'product' => $product
+        return view('show', [
+            'product' => $product,
         ]);
     }
 }

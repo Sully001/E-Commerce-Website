@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+//When going to the products page we are getting a index of all
+//products from our database using the index() function
+Route::get('/products', [ProductController::class, 'index']);//->name('products.index');
 
-Route::get('/products/{id}', function ($id) {
-    return view('product', ['product' => $id]);
-});
+Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
 
 
 

@@ -14,9 +14,5 @@
     <body>
         @yield('content')
 
-        
-        <footer>
-            Copyright 2022 E-Commerce Site 2022
-        </footer>
     </body>
 </html>
