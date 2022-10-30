@@ -22,6 +22,8 @@ Route::get('/', function () {
 //products from our database using the index() function
 Route::get('/products', [ProductController::class, 'index']);//->name('products.index');
 
+//This route takes an {id} as a query parameter to take you 
+//to a specific product page.
 Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
 
 

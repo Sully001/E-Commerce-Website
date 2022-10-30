@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+//This page display a single product on the page 
+
 @section('content')
 <h1>This will show a single product on the page</h1>
 <img src="{{ $product->product_image }}" alt="Product Image" height="200px" width="200px">
