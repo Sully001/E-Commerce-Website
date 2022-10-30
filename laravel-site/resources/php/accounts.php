@@ -1,5 +1,3 @@
---Work in Progress, I'll change the status when done.--
---INCOMPLETE--
 <?php
 class Account{
     private $Name;
@@ -9,15 +7,16 @@ class Account{
     private $Email;
     /* Need HTML form inputs to populate variables */
 
-    function __construct($Name, $AccountType, $Password, $Email) {
+    function __construct($Name, $AccountType, $Password, $Email, $Phone) {
         $this->Name = $Name;
         $this->AccountType = $AccountType;
         $this->Password = $Password;
         $this->Email = $Email;
+        $this->Phone = $Phone;
     }
-    
-    function getName() {
 
+    function getName() {
+ 
     }
 
     function getAccountType() {
@@ -33,6 +32,3 @@ class Account{
     }
 
 }
-
-
-?>
