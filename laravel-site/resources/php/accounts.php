@@ -32,10 +32,3 @@ class Account{
     }
 
 }
-
-
-class AccountCreate {
-
-}
-
-?>
