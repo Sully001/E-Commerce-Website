@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name');
             $table->decimal('price');
-            $table->string('description');
+            $table->text('description');
             $table->integer('quantity');
             $table->string('product_type');
             $table->string('product_image');
