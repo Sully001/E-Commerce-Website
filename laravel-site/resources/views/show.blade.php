@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 
-//This page display a single product on the page 
 
 @section('content')
 <h1>This will show a single product on the page</h1>
