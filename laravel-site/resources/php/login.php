@@ -4,7 +4,6 @@
 *Requires a HTML form, with username and password.
 *Uses sessions.
 */
-
 if(isset($_POST['submitted'])) { #If the submission button is clicked, run this PHP
     if(!isset($_POST['username'], $_POST['password'])) { #Checks fields in HTML form are filled in (Validation!).
         exit("Please enter a username and password.");
