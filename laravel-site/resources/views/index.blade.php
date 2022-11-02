@@ -1,10 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-<nav>
-    Our Navbar
-</nav>
-
 <div class="all-products">
 @foreach ($products as $product)
     <a href="/products/{{ $product->product_id }}">

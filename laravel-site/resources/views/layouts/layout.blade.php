@@ -12,7 +12,19 @@
     <!-- Styles -->
 </head>
     <body>
+        <div class="navbar">
+            <p>Hardware28</p>
+            <ul class="navbar-options">
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+            <div class="navbar-login-signup">
+                <a href="#" class="navbar-login-link">Login</a>
+                <a href="#" class="navbar-signup-link">Sign Up</a>
+            </div>
+            
+        </div>
         @yield('content')
-
     </body>
 </html>

@@ -3,14 +3,23 @@ body {
     margin: 0;
 }
 
-
-.all-products {
+.navbar {
     display: flex;
-    gap: 40px;
+    justify-content: space-evenly;
 }
 
-nav {
-    background-color: grey;
-    height: 20px;
-    text-align: center;
+.navbar-options li {
+    padding-left: 20px;
+}
+
+.navbar-login-signup {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar-options {
+    display: flex;
+    list-style: none;
+    padding-left: 20px;
 }

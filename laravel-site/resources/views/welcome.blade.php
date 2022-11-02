@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-<h1>This is a website</h1>
+<h1>Welcome Page</h1>
 @endsection
     
