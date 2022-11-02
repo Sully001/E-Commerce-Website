@@ -14,8 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//This route sends you to the landing page(welcome page of the site)
 Route::get('/', function () {
     return view('welcome');
+});
+
+//Returns the dashboard view of the admin page
+Route::get('/admin/dashboard', function() {
+    return view('admin.dashboard');
+});
+
+//Returns the add prodct view for the admin
+Route::get('/admin/create', function() {
+    return view('admin.create');
 });
 
 //When going to the products page we are getting a index of all
@@ -25,6 +36,8 @@ Route::get('/products', [ProductController::class, 'index']);//->name('products.
 //This route takes an {id} as a query parameter to take you 
 //to a specific product page.
 Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
+
+
 
 
 
