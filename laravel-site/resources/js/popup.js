@@ -1,0 +1,1 @@
+alert("You are not an admin! If this information is wrong, please contact us.");
