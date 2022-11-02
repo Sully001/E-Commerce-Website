@@ -37,6 +37,9 @@ Route::get('/products', [ProductController::class, 'index']);//->name('products.
 //to a specific product page.
 Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
 
+Route::get('/login', function() {
+    return view('login');
+});
 
 
 

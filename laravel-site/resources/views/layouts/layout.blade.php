@@ -20,7 +20,7 @@
                 <li>Contact Us</li>
             </ul>
             <div class="navbar-login-signup">
-                <a href="#" class="navbar-login-link">Login</a>
+                <a href="/login" class="navbar-login-link">Login</a>
                 <a href="#" class="navbar-signup-link">Sign Up</a>
             </div>
             

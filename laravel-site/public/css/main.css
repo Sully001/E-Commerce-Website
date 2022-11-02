@@ -16,6 +16,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-left: 20px;
+}
+
+.navbar-login-signup a {
+    padding-left: 20px;
+    text-decoration: none; 
+    color: black; 
 }
 
 .navbar-options {
