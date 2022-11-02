@@ -15,9 +15,9 @@
         <div class="navbar">
             <p>Hardware28</p>
             <ul class="navbar-options">
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
             <div class="navbar-login-signup">
                 <a href="/login" class="navbar-login-link">Login</a>

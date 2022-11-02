@@ -47,4 +47,13 @@ Route::get('/signup', function() {
     return view('signup');
 });
 
+//Route for About Us
+Route::get('/about', function() {
+    return view('about');
+});
+
+Route::get('/contact', function() {
+    return view('contact');
+});
+
 
