@@ -37,10 +37,14 @@ Route::get('/products', [ProductController::class, 'index']);//->name('products.
 //to a specific product page.
 Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
 
+//Route for login
 Route::get('/login', function() {
     return view('login');
 });
 
-
+//Route for signup
+Route::get('/signup', function() {
+    return view('signup');
+});
 
 
