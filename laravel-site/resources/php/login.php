@@ -5,18 +5,18 @@
 *Uses sessions.
 */
 if(isset($_POST['submitted'])) { #If the submission button is clicked, run this PHP
-    if(!isset($_POST['username'], $_POST['password'])) { #Checks fields in HTML form are filled in (Validation!).
+    if(!isset($_POST['Username'], $_POST['Password'])) { #Checks fields in HTML form are filled in (Validation!).
         exit("Please enter a username and password.");
     }
     require_once("connect.php"); #Connects to the database through the connect.php file.
     try {
-        $status = $db->prepare('SELECT password FROM databasename WHERE email = ?'); #Protects from SQLInjection, preparing SQL query. 
-        $status->execute(array($_POST['username'])); #Running the query.
+        $status = $db->prepare('SELECT Password FROM databasename WHERE email = ?'); #Protects from SQLInjection, preparing SQL query. 
+        $status->execute(array($_POST['Username'])); #Running the query.
         if($status->rowCount()>0) { #Check username exists.
             $row = $status->fetch(); #Get username
-            if(password_verify($_POST['password'], $row['password'])) { #Checks passwords match.
+            if(password_verify($_POST['Password'], $row['Password'])) { #Checks passwords match.
                 session_start(); #Starts session to keep user logged in.
-                $_SESSION['username']=$_POST['username'];
+                $_SESSION['Username']=$_POST['Username'];
                 header("Location:landingpage.html"); #Redirects user to landing page, logged in.
                 exit();
             } else {
