@@ -1,6 +1,6 @@
 <?php
 
-$host;
+$host; #I need this information to connect ot the database.
 $db_name;
 $username;
 $password;
