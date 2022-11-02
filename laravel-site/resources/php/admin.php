@@ -6,13 +6,15 @@
 */
 session_start();
 if(!isset($_SESSION['username'])) { #If no username is set, refuse assess.
-    header("Location:landingpage.php"); #Send user back home.
+    header("Location:landingpage.html"); #Send user back home.
     exit();
 }
 #Fetch account type by the username.
+$sqlType = $db->prepare('SELECT FROM AccountType FROM databasename WHERE Email= usernameHere');
+$sqlType->exec(array($_POST['AccountType']));
 if($_session['username']/*...*/) { #Checks the user is an admin, if not run this
     echo '<script>popup.js</script>';
-    header("Location:landingpage.php");
+    header("Location:landingpage.html");
     session_destroy(); #End session after trying to access admin account.
     exit();
 }
@@ -24,4 +26,7 @@ if($_session['username']/*...*/) { #Checks the user is an admin, if not run this
         <meta charset="UTF-8"/>
         <title>Administrator Controls</title>
     </head>
+    <body>
+        <header id="main-header">Admin Pannel</header>
+    </body>
 </html>
