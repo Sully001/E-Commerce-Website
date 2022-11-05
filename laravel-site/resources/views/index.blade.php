@@ -9,7 +9,7 @@
     @foreach ($products as $product)
         <a href="/products/{{ $product->ProductID }}">
             <div>
-                <img src="{{ $product->product_image}}" alt="This products image" height="200px" width="200px">
+                <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="This products image" height="200px" width="200px">
                 <p><strong>{{ $product->ProductName }}</strong></p>
                 <p>£{{ $product->Price}}</p>
                 

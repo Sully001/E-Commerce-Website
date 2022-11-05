@@ -34,8 +34,9 @@ class ProductController extends Controller
         $product->CategoryName = request('categories');
 
         $path = $request->file('image')->store('images');
-
-
+        $product->ImageURL = $path;
+        $product->save();
+        return redirect('admin/dashboard');
     }
 
 }

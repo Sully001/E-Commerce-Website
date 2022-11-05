@@ -24,10 +24,13 @@ Route::get('/admin/dashboard', function() {
     return view('admin.dashboard');
 });
 
-//Returns the add prodct view for the admin
+//Returns the add product view for the admin
 Route::get('/admin/create', function() {
     return view('admin.create');
 });
+
+//Route for storing product requests
+Route::post('/admin/dashboard', [ProductController::class, 'store']);
 
 //When going to the products page we are getting a index of all
 //products from our database using the index() function
