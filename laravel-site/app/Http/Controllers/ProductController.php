@@ -24,4 +24,18 @@ class ProductController extends Controller
             'product' => $product,
         ]);
     }
+
+    public function store(Request $request) {
+        $product = new Product();
+        $product->ProductName = request('productname');
+        $product->Price = request('price');
+        $product->Quantity = request('qty');
+        $product->Description = request('description');
+        $product->CategoryName = request('categories');
+
+        $path = $request->file('image')->store('images');
+
+
+    }
+
 }

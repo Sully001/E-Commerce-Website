@@ -7,13 +7,13 @@
 
     <div class="all-products">
     @foreach ($products as $product)
-        <a href="/products/{{ $product->product_id }}">
+        <a href="/products/{{ $product->ProductID }}">
             <div>
                 <img src="{{ $product->product_image}}" alt="This products image" height="200px" width="200px">
-                <p><strong>{{ $product->name }}</strong></p>
-                <p>£{{ $product->price}}</p>
+                <p><strong>{{ $product->ProductName }}</strong></p>
+                <p>£{{ $product->Price}}</p>
                 
-                @if ($product->quantity > 0)
+                @if ($product->Quantity > 0)
                     <p>In Stock</p>
                 @else
                     <p>Out of Stock</p>
