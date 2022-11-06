@@ -28,8 +28,19 @@
                 <th scope="row">{{ $product->Price }}</th>
                 <th scope="row">{{ $product->Quantity }}</th>
                 <th scope="row">{{ $product->CategoryName }}</th>
-                <th scope="row"><button class="btn btn-warning">Edit</button></th>
-                <th scope="row"><button class="btn btn-danger">Delete</button></th>
+                <th scope="row">
+                    <form action="">
+                        @csrf
+                        <button class="btn btn-warning">Edit</button>
+                    </form>
+                </th>
+                <th scope="row">
+                    <form action="{{ route('admin.destroy', $product->ProductID) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </th>
             </tr>
             @endforeach
         </tbody>

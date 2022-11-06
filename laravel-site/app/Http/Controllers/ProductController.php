@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -44,6 +45,17 @@ class ProductController extends Controller
         $product->ImageURL = $path;
         $product->save();
         return redirect('admin/dashboard');
+    }
+
+    public function destroy($id) {
+        $product = Product::findOrFail($id);
+        //1. Delete the image of the product in the storage
+        if (Storage::disk('local')->exists($product->ImageURL)) {
+            Storage::disk('local')->delete($product->ImageURL);
+            $product->delete();
+        }
+        //2. Delete the product from the table
+        return redirect('/admin/dashboard');
     }
 
 }

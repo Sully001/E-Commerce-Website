@@ -28,6 +28,9 @@ Route::get('/products/{id}', [ProductController::class, 'show'])->name('products
 //Returns the dashboard view of the admin page
 Route::get('/admin/dashboard', [ProductController::class, 'adminIndex']);
 
+//Admin route to delete a product
+Route::delete('/admin/dashboard/{id}', [ProductController::class, 'destroy'])->name('admin.destroy');
+
 
 
 //This route sends you to the landing page(welcome page of the site)
