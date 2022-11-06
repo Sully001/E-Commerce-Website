@@ -1,10 +1,11 @@
 @extends('layouts.layout')
 
+@section('css')
+    <link rel="stylesheet" href="" type="text/css">
+@endsection
+
 @section('content')
-
     <h1 class="all-products-title">All Products</h1>
-
-
     <div class="all-products">
     @foreach ($products as $product)
         <a href="{{ route('products.show', $product->ProductID) }}">

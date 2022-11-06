@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('css')
+    <link rel="stylesheet" href="" type="text/css">
+@endsection
+
 @section('content')
 <div class="product">
     <h1>{{$product->ProductName}}</h1>
