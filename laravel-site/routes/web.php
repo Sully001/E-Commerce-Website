@@ -25,17 +25,14 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 //to a specific product page.
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
+//Returns the dashboard view of the admin page
+Route::get('/admin/dashboard', [ProductController::class, 'adminIndex']);
 
 
 
 //This route sends you to the landing page(welcome page of the site)
 Route::get('/', function () {
     return view('welcome');
-});
-
-//Returns the dashboard view of the admin page
-Route::get('/admin/dashboard', function() {
-    return view('admin.dashboard');
 });
 
 //Returns the add product view for the admin

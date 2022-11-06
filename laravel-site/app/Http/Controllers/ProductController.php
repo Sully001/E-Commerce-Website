@@ -17,6 +17,13 @@ class ProductController extends Controller
         ]);
     }
 
+    public function adminIndex() {
+        $products = Product::all();
+        return view('admin.dashboard', [
+            'products' => $products,
+        ]);
+    }
+
     //This method gets a single product from the database using the id or Product number.
     public function show($id) {
         $product = Product::findorFail($id);
