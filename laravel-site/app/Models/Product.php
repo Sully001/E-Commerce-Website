@@ -16,7 +16,7 @@ class Product extends Model
 
     //This states what they primaryKey (unique identifier) of the
     //products table is. Default primaryKey in laravel is "id".
-    protected $primaryKey = "product_id";
+    protected $primaryKey = "ProductID";
 
     public $timestamps = false;
 }
