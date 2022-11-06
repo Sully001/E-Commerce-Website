@@ -3,7 +3,7 @@
 @section('content')
 <h1>Add a New Product</h1>
 
-<form action="/admin/dashboard" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="product_name">Product Name: </label>
     <input type="text" name="productname"> <br><br>

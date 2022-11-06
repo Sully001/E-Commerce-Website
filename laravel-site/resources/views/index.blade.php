@@ -7,7 +7,7 @@
 
     <div class="all-products">
     @foreach ($products as $product)
-        <a href="/products/{{ $product->ProductID }}">
+        <a href="{{ route('products.show', $product->ProductID) }}">
             <div>
                 <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="This products image" height="200px" width="200px">
                 <p><strong>{{ $product->ProductName }}</strong></p>

@@ -14,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route for storing product requests in the admin page
+Route::post('/admin/dashboard', [ProductController::class, 'store'])->name('admin.store');
+
+//When going to the products page we are getting a index of all
+//products from our database using the index() function
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+//This route takes an {id} as a query parameter to take you 
+//to a specific product page.
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+
+
+
+
 //This route sends you to the landing page(welcome page of the site)
 Route::get('/', function () {
     return view('welcome');
@@ -28,18 +42,6 @@ Route::get('/admin/dashboard', function() {
 Route::get('/admin/create', function() {
     return view('admin.create');
 });
-
-//Route for storing product requests
-Route::post('/admin/dashboard', [ProductController::class, 'store']);
-
-//When going to the products page we are getting a index of all
-//products from our database using the index() function
-Route::get('/products', [ProductController::class, 'index']);//->name('products.index');
-
-//This route takes an {id} as a query parameter to take you 
-//to a specific product page.
-Route::get('/products/{id}', [ProductController::class, 'show']);//->name('products.show');
-
 //Route for login
 Route::get('/login', function() {
     return view('login');

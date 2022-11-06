@@ -15,7 +15,7 @@
         <div class="navbar">
             <p>Hardware28</p>
             <ul class="navbar-options">
-                <li><a href="/products">Products</a></li>
+                <li><a href="{{ route('products.index') }}">Products</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
