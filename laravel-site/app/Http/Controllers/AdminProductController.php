@@ -51,13 +51,22 @@ class AdminProductController extends Controller
         return redirect('/admin/dashboard');
     }
 
-    public function edit($id) {
+    public function edit(Request $request, $id) {
         $product = Product::findorFail($id);
         $product->ProductName = request('productname');
         $product->Price = request('price');
         $product->Quantity = request('qty');
         $product->Description = request('description');
         $product->CategoryName = request('categories');
+
+        if (request()->allFiles()) {
+            if (Storage::disk('local')->exists($product->ImageURL)) {
+                Storage::disk('local')->delete($product->ImageURL);
+            }
+            $path = $request->file('image')->store('images');
+            $product->ImageURL = $path;
+        }
+
         $product->save();
         return redirect('admin/dashboard');
     }
