@@ -29,10 +29,9 @@
                 <th scope="row">{{ $product->Quantity }}</th>
                 <th scope="row">{{ $product->CategoryName }}</th>
                 <th scope="row">
-                    <form action="">
-                        @csrf
+                    <a href="{{ route('admin.edit', $product->ProductID)}}">
                         <button class="btn btn-warning">Edit</button>
-                    </form>
+                    </a>
                 </th>
                 <th scope="row">
                     <form action="{{ route('admin.destroy', $product->ProductID) }}" method="POST">

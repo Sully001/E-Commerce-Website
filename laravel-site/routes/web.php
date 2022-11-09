@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route for storing product requests in the admin page
-Route::post('/admin/dashboard', [ProductController::class, 'store'])->name('admin.store');
+Route::post('/admin/dashboard', [AdminProductController::class, 'store'])->name('admin.store');
 
 //When going to the products page we are getting a index of all
 //products from our database using the index() function
@@ -26,10 +26,18 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
 //Returns the dashboard view of the admin page
-Route::get('/admin/dashboard', [ProductController::class, 'adminIndex']);
+Route::get('/admin/dashboard', [AdminProductController::class, 'adminIndex']);
 
 //Admin route to delete a product
-Route::delete('/admin/dashboard/{id}', [ProductController::class, 'destroy'])->name('admin.destroy');
+Route::delete('/admin/dashboard/{id}', [AdminProductController::class, 'destroy'])->name('admin.destroy');
+
+Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit');
+
+Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
+
+
+
+
 
 
 
