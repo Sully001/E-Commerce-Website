@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h1>This is the dashboard for the admin</h1>
+    <h1 style="text-align: center">Admin Dashboard</h1>
     <label for="addproduct">Click here to ---></label>
     <a href="/admin/create"><button name="addproduct" class="btn btn-primary">Add Product</button></a>
     
