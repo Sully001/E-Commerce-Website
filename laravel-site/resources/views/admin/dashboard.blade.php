@@ -6,6 +6,9 @@
 
 @section('content')
     <h1>This is the dashboard for the admin</h1>
+    <label for="addproduct">Click here to ---></label>
+    <a href="/admin/create"><button name="addproduct" class="btn btn-primary">Add Product</button></a>
+    
 
     <div class="product-dashboard">
         <table class="table table-striped table-dark">
