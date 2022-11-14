@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('css')
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="/css/products.css" type="text/css">
 @endsection
 
 @section('content')
@@ -9,9 +9,9 @@
     <div class="all-products">
     @foreach ($products as $product)
         <a href="{{ route('products.show', $product->ProductID) }}">
-            <div>
+            <div class="individual-product">
                 <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="This products image" height="200px" width="200px">
-                <p><strong>{{ $product->ProductName }}</strong></p>
+                <p class="product-name"><strong>{{ $product->ProductName }}</strong></p>
                 <p>£{{ $product->Price}}</p>
                 
                 @if ($product->Quantity > 0)
