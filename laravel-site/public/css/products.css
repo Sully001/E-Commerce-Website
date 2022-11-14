@@ -6,17 +6,27 @@
 .all-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 15px;
     grid-auto-rows: 1fr;
+    padding: 20px;
 }
 
 .individual-product {
-    border-radius: 2px solid;
+    border-radius: 10px;
+    border: 2px grey;
     text-align: left;
     box-shadow: 1px 1px 1px 1px grey;
-
+    padding: 5px;
 }
 
 .product-name {
     font-size: 10px;
+}
+
+.all-products-div {
+    margin: 20px;
+}
+
+.all-products-div p {
+    text-align: center;
 }

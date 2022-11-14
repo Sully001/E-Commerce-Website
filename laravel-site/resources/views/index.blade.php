@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-    <h1 class="all-products-title">All Products</h1>
+    <div class="all-products-div">
+        <h1 class="all-products-title">All Products</h1>
+        <p>Here are all our top products</p>
+    </div>
+    
     <div class="all-products">
     @foreach ($products as $product)
         <a href="{{ route('products.show', $product->ProductID) }}">
