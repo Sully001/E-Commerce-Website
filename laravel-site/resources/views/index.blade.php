@@ -16,13 +16,16 @@
             <div class="individual-product">
                 <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="This products image" height="200px" width="200px">
                 <p class="product-name"><strong>{{ $product->ProductName }}</strong></p>
-                <p>£{{ $product->Price}}</p>
+
+                <div class="price-stock">
+                    <p class="product-price">£{{ $product->Price}}</p>
+                    @if ($product->Quantity > 0)
+                        <p>In Stock</p>
+                    @else
+                        <p>Out of Stock</p>
+                    @endif
+                </div>
                 
-                @if ($product->Quantity > 0)
-                    <p>In Stock</p>
-                @else
-                    <p>Out of Stock</p>
-                @endif
             </div>
         </a>
     @endforeach
