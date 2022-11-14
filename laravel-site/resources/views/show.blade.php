@@ -9,10 +9,7 @@
     <p class="product-name">{{$product->ProductName}}</p>
     <div>
         <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="Product Image" height="200px" width="200px">
-        <h4>
-            <strong>Price: {{ $product->Price }}
-            </strong>
-        </h4>
+        <h4>Price: {{ $product->Price }}</h4>
 
     @if ($product->Quantity > 0)
         <h4>In Stock</h4>

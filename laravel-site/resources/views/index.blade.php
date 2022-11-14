@@ -15,7 +15,7 @@
         <a href="{{ route('products.show', $product->ProductID) }}">
             <div class="individual-product">
                 <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="This products image" height="200px" width="200px">
-                <p class="product-name"><strong>{{ $product->ProductName }}</strong></p>
+                <p class="product-name">{{ $product->ProductName }}</p>
 
                 <div class="price-stock">
                     <p class="product-price">£{{ $product->Price}}</p>
