@@ -1,0 +1,26 @@
+.product-container {
+    padding: 20px;
+}
+
+.product-name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.product-main {
+    display: flex;
+}
+
+.section-left {
+    padding: 20px;
+}
+
+.section-left img {
+    border-radius: 10px;
+    border: 2px grey;
+    box-shadow: 1px 1px 1px 1px grey;
+    height: 400px;
+    width: 400px;
+}
