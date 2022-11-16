@@ -17,7 +17,7 @@
             <form action="" method="POST">
                 @csrf
                 <label for="email" class="form-label mt-2">Email</label>
-                <input type="text" id="email" name="email" class="form-control" placeholder="Email" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
 
                 <label for="password" class="form-label mt-2">Password</label>
                 <input type="text" id="password" name="password" class="form-control" placeholder="Password" required>
