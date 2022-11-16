@@ -16,7 +16,7 @@
         <div class="col-lg-5 col-md-8">
             <form action="" method="POST">
                 @csrf
-                <label for="name" class="form-label mt-2">Email</label>
+                <label for="name" class="form-label mt-2">Name</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
 
                 <label for="email" class="form-label mt-2">Email</label>
