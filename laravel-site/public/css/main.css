@@ -22,7 +22,7 @@ body {
 .navbar-options a {
     text-decoration: none;
     color: white;   
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar-options a:hover {
@@ -41,7 +41,7 @@ body {
 .name {
     color: white;
     margin: 0;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 
