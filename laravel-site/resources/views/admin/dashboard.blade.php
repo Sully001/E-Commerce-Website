@@ -5,14 +5,14 @@
 @endsection
 
 @section('content')
+    <h1 style="text-align: center">Admin Dashboard</h1>
+
     <nav class="nav nav-pills nav-fill">
         <a class="nav-link active" href="/admin/dashboard">View Products</a>
         <a class="nav-link" href="/admin/create">Add Product</a>
         <a class="nav-link" href="#">View Users</a>
         <a class="nav-link" href="#">All Orders</a>
     </nav>
-
-    <h1 style="text-align: center">Admin Dashboard</h1>
     
     <div class="product-dashboard">
         <table class="table table-striped ">

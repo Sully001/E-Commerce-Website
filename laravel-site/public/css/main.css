@@ -5,19 +5,24 @@ body {
 
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .navbar-options {
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-options a {
     text-decoration: none;
-    color: black;   
+    color: white;   
+    font-weight: bold;
 }
 
 .navbar-options a:hover {
@@ -26,21 +31,23 @@ body {
 
 .navbar-login-signup {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 20px;
+    gap: 20px;
 }
 
-.navbar-login-signup a {
-    padding-left: 20px;
-    text-decoration: none; 
-    color: black; 
+.navbar-login-signup a{
+    display: flex;
 }
+
+.name {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
 
 .navbar-options {
     display: flex;
     list-style: none;
-    padding-left: 20px;
 }
 
 

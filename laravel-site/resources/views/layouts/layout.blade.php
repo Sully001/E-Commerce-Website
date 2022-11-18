@@ -14,18 +14,18 @@
     <!-- Styles -->
 </head>
     <body>
-        <div class="navbar">
-            <p>Hardware28</p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <div class="navbar bg-dark">
+            <p class="name">Hardware28</p>    
             <ul class="navbar-options">
                 <li><a href="{{ route('products.index') }}">Products</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
             <div class="navbar-login-signup">
-                <a href="/login" class="navbar-login-link">Login</a>
-                <a href="/signup" class="navbar-signup-link">Sign Up</a>
+                <a href="/login" class="navbar-login-link"><button class="btn btn-primary">Log In</button></a>
+                <a href="/signup" class="navbar-signup-link"><button class="btn btn-primary">Sign Up</button></a>
             </div>
-            
         </div>
         @yield('content')
     </body>
