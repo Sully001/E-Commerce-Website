@@ -10,15 +10,24 @@ if(isset($_POST['submitted'])) { #If the submission button is clicked, run this 
     }
     require_once("connect.php"); #Connects to the database through the connect.php file.
     try {
-        $status = $db->prepare('SELECT Password FROM databasename WHERE email = ?'); #Protects from SQLInjection, preparing SQL query. 
+        $status = $db->prepare('SELECT Password FROM laravel-site WHERE email = ?'); #Protects from SQLInjection, preparing SQL query. 
         $status->execute(array($_POST['Username'])); #Running the query.
         if($status->rowCount()>0) { #Check username exists.
             $row = $status->fetch(); #Get username
             if(password_verify($_POST['Password'], $row['Password'])) { #Checks passwords match.
                 session_start(); #Starts session to keep user logged in.
                 $_SESSION['Username']=$_POST['Username'];
-                header("Location:landingpage.html"); #Redirects user to landing page, logged in.
-                exit();
+                $userCheck=$_SESSION['Username'];
+                $userType= $db->prepare("SELECT AdminAccount FROM laravel-site WHERE Username = '$userCheck'");
+                $userType->execute();
+                $adminChecker = $userType->fetch();
+                if($adminChecker = true) { #If user IS an admin
+                    header("Location:dashboard.blade.php"); #Redirect to admin page.
+                    exit();
+                } else { #If not an admin, go to home page.
+                    header("Location:home.html");
+                    exit();
+                }
             } else {
                 echo "Error, password doesn't match"; #Displays error if password donesn't match.
             }
