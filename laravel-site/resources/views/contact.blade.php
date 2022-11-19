@@ -1,9 +1,10 @@
 @extends('layouts.layout')
 
 @section('css')
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="/css/contact.css" type="text/css">
 @endsection
 
 @section('content')
-<h1>This is the contact page</h1>
+<h3>This is the contact page</h3>
+<p>asfjjik</p>
 @endsection
