@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-<h1>This is the about page</h1>
+<h1>About to do the page</h1>
 @endsection
