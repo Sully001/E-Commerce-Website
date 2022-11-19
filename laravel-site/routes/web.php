@@ -70,3 +70,6 @@ Route::get('/contact', function() {
 });
 
 
+Route::get('/basket', function() {
+    return view('basket');
+});

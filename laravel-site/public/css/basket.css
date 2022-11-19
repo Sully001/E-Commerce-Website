@@ -1,0 +1,82 @@
+.basket-main {
+    padding: 20px;
+}
+
+div h1 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.individual-item {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.individual-item img {
+    margin-top: 10px;
+}
+
+.image-text-container {
+    display: flex;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #2af714;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.price-stock {
+    padding-right: 10px;
+}
+
+.stock-check {
+    display: flex;
+    align-items: center;
+}
+
+.stock-check p {
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.all-items h1 {
+    margin-bottom: 30px;
+}
+
+.all-items-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+}
+
+.checkout-container {
+    border: 2px solid;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-container div, .checkout-container button {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.checkout {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-txt {
+    margin: 0;
+    padding-right: 5px;
+}

@@ -10,7 +10,12 @@
     <div class="product-main">
         <div class="section-left">
             <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="Product Image" height="200px" width="200px">
-            <h4>Price: {{ $product->Price }}</h4>
+            <h4 class="price">Price: £{{ $product->Price }}</h4>
+            <div class="add-payment-options">
+                <form action="">
+                    <button class="add-to-basket btn btn-info">Add To Basket</button>
+                </form>
+            </div>
         </div>
         
         <div class="section-right">

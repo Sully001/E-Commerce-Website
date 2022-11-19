@@ -24,3 +24,9 @@
     height: 400px;
     width: 400px;
 }
+
+.price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
