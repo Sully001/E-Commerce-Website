@@ -13,7 +13,7 @@ if(isset($_POST['submitted'])) { #If the submit button on the form is clicked:
         $password=isset($_POST['password'])?password_hash($_POST['password'],PASSWORD_DEFAULT):false; #Setting password, but hashing the password too.
         $accounttype=isset($_POST['accounttype'])?$_POST['accounttype']:false;
         $phone=isset($_POST['phone'])?$_POST['phone']:false;
-        $sql="INSERT INTO databaseName (Name, AccountType, Password, Phone, Email) VALUES ('$name','$accounttype','$password','$phone','$email)"; #Won't work until database complete.
+        $sql="INSERT INTO laravel-site (Name, AccountType, Password, Phone, Email) VALUES ('$name','$accounttype','$password','$phone','$email)"; #Won't work until database complete.
         $db->exec($sql); #Runs the SQL query in the database, adding all fields. 
     } catch (PDOException $e) {
         echo "Unable to create account."; #If an error occurs.
