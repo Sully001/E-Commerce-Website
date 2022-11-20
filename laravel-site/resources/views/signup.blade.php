@@ -28,7 +28,7 @@
                 <label for="password_confirmation" class="form-label mt-2">Retype Password</label>
                 <input type="password" id="password" name="password_confirmation" class="form-control" placeholder="Retype your password" required>
                 
-                <button type="submit" class="btn btn-primary mt-2 text-center">Submit</button>
+                <button type="submit" class="btn btn-primary mt-2">Sign Up</button>
                 </div>
             </form>
         </div>
