@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="basket-main">
-        <h1>Your Order</h1>
+        <h1>User's Basket</h1>
         <div class="all-items-container">
             <div class="all-items">
                 <div class="individual-item">
