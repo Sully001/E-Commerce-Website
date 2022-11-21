@@ -1,3 +1,19 @@
-h1{
-    color: blue;
+h4{
+  text-align: center;
 }
+.centerText{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+    min-height: 70px;
+    padding: 40px;
+  }
+.Hardware28{
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+  }
+.textSplit{
+    border: 60px solid rgb(255, 255, 255);
+  }

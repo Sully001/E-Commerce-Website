@@ -1,0 +1,55 @@
+.ContactUs {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 70px;
+    padding: 10px;
+  }
+.furtherquestions{
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+  }
+div p{
+    font-size: 20px;
+}
+div h6{
+  font-size: 20px;
+  padding-left: 555px;
+  padding-top: 30px;
+}
+.h6a{ 
+  display: inline-block;
+    
+    padding-left: 327px;
+}
+.h6b{ 
+  display: inline-block;
+    
+    padding-left: 240px;
+}
+.E-Mail{
+    margin:20px;
+    padding-left: 600px;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 70px; 
+}
+.Github{
+  margin:20px;
+  padding-left: 320px;
+  min-height: 80px;
+  min-width: 80px;
+  max-height: 115px; 
+}
+.Address{
+  margin:20px;
+  padding-left: 250px;
+  min-height: 60px;
+  min-width: 60px;
+  max-height: 95px;
+}
+.splitText{
+  border: 35px solid rgb(255, 255, 255);
+}
+
