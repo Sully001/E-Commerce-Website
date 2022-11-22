@@ -14,7 +14,7 @@
     <nav class="nav nav-pills nav-fill">
         <a class="nav-link" id="view-products" href="/admin/dashboard">View Products</a>
         <a class="nav-link" href="/admin/create">Add Product</a>
-        <a class="nav-link" href="#">View Users</a>
+        <a class="nav-link" href="/admin/users">View Users</a>
         <a class="nav-link" href="#">All Orders</a>
     </nav>
     

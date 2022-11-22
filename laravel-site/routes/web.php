@@ -1,9 +1,10 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +76,8 @@ Route::get('/contact', function() {
 Route::get('/basket', function() {
     return view('basket');
 });
+
+Route::get("/admin/users", [AdminUserController::class, 'userIndex']);
 
 //Route for register page.
 Route::get('/register', [RegisterController::class, 'index']);
