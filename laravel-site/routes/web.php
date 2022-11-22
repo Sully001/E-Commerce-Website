@@ -43,6 +43,10 @@ Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('a
 
 
 
+//This route sends you to the landing page(welcome page of the site)
+Route::get('/', function () {
+    return view('welcome');
+});
 
 //Returns the add product view for the admin
 Route::get('/admin/create', function() {
