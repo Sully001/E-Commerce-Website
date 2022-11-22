@@ -30,6 +30,8 @@ class RegisterController extends Controller
         ]);
 
         auth()->attempt($request->only('email', 'password'));
+        //This takes the users name and adds it to the session variable (Suliman)
+        session(['name' => auth()->user()->name]);
 
         return redirect()->route('welcome');
     }
