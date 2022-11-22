@@ -19,7 +19,7 @@
 <img class="E-Mail" src="/images/outlook-favicon.png" alt="E-Mail Image">
 
 
-<a href="https://github.com/">
+<a href="https://github.com/Sully001/E-Commerce-Website">
 <img class="Github" src="/images/github-favicon.png" alt="Github Image">
 
 <a href="https://www.aston.ac.uk/">
