@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,5 +85,13 @@ Route::get("/admin/users", [AdminUserController::class, 'userIndex']);
 Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
+
+//Route for login page.
+Route::get('/login', [LoginController::class, 'index']);
+
+Route::post('/login', [LoginController::class, 'store']);
+
+//Route for Logout
+Route::get('/logout', [LogoutController::class, 'store']);
 
 Route::get('/welcome', [DashboardController::class, 'index'])->name('welcome');
