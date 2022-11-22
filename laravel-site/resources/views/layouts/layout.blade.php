@@ -27,8 +27,13 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
             <div class="navbar-login-signup">
+                @if (Auth::check())
+                <a href="/basket" class="navbar-login-link"><button class="btn btn-primary">Basket</button></a>
+                <a href="/login" class="navbar-login-link"><button class="btn btn-primary">Log Out</button></a>
+                @else
                 <a href="/login" class="navbar-login-link"><button class="btn btn-primary">Log In</button></a>
                 <a href="/signup" class="navbar-signup-link"><button class="btn btn-primary">Sign Up</button></a>
+                @endif
             </div>
         </div>
         @yield('content')
