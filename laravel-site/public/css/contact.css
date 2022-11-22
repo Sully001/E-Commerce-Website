@@ -15,13 +15,13 @@ div p{
 }
 div h6{
 font-size: 20px;
-padding-left: 538px;
+padding-left: 337px;
 padding-top: 30px;
 }
 .h6a{ 
 display: inline-block;
   
-  padding-left: 327px;
+  padding-left: 242px;
 }
 .h6b{ 
 display: inline-block;
@@ -30,14 +30,14 @@ display: inline-block;
 }
 .E-Mail{
   margin:20px;
-  padding-left: 580px;
+  padding-left: 373px;
   min-height: 50px;
   min-width: 50px;
   max-height: 70px; 
 }
 .Github{
 margin:20px;
-padding-left: 320px;
+padding-left: 242px;
 min-height: 80px;
 min-width: 80px;
 max-height: 115px; 

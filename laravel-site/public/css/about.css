@@ -17,3 +17,22 @@ h4{
 .textSplit{
     border: 60px solid rgb(255, 255, 255);
   }
+.AboutUsPics{
+  display: inline-block;
+  height: 686px;
+  padding-left: 250px;
+}
+/* .left{    
+  text-align: left;  
+}
+.right{
+  text-align: right;
+}
+
+.imageContainer{
+  
+  display:flex;
+  padding: 25px;
+  
+  margin: 25px;
+} */
