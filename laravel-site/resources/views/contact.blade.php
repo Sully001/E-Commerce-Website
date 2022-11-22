@@ -34,5 +34,5 @@
     <div class="h6b">  
     Aston St, Birmingham B4 7ET
 </h6>
-</div></div>      
+</div></div></div>      
 @endsection
