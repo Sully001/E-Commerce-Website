@@ -7,7 +7,6 @@
 @section('content')
     <div class="basket-main">
         <h1>User {{ Session::get('id') }}'s Basket</h1>
-        <p>{{ $user->email}}</p>
         <div class="all-items-container">
             <div class="all-items">
                 <div class="individual-item">
@@ -21,6 +20,7 @@
                     </div>
                     <div class="price-stock">
                         <p>Price: £1999</p>
+                        <p>Quantity - 1</p>
                         <div class="stock-check">
                             <span class="dot"></span>
                             <p>In Stock</p>

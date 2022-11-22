@@ -41,6 +41,11 @@ Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('a
 
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
 
+////////Basket Routes///////////
+Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
+
+Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
+
 
 
 
@@ -76,8 +81,6 @@ Route::get('/contact', function() {
     return view('contact');
 });
 
-////////Basket Routes///////////
-Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 
 Route::get("/admin/users", [AdminUserController::class, 'userIndex']);
 

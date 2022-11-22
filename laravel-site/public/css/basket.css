@@ -26,6 +26,11 @@ div h1 {
     display: flex;
 }
 
+.name-item-num p {
+    margin-top: 5px;
+}
+
+
 .dot {
     height: 15px;
     width: 15px;
