@@ -23,9 +23,13 @@ class LoginController extends Controller
         
         if(Auth::attempt($userCredentials)) {
             $request->session()->regenerate();
+            //Grabs users name into session
+            session(['name' => auth()->user()->name]);
             //HERE IDENTIFY IF USER IS AN ADMIN OR NOT
-            if(Auth::attempt(['admin'=> "Admin"])) {
-                return redirect()->intended('admin.dashboard');
+            //Get the value from the Admin column
+            $isAdmin = auth()->user()->admin;
+            if($isAdmin == "Admin") {
+                return redirect()->intended('/admin/dashboard');
             }
             return redirect()->intended('welcome');
         }
