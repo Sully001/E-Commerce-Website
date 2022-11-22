@@ -7,7 +7,7 @@ h4{
     align-items: center; 
    
     min-height: 70px;
-    padding: 40px;
+    padding: 10px;
   }
 .Hardware28{
     margin: 20px;
@@ -15,14 +15,19 @@ h4{
     justify-content: center; 
   }
 .textSplit{
+    border: 39px solid rgb(255, 255, 255);
+  }
+.textSplit2{
     border: 60px solid rgb(255, 255, 255);
   }
 .AboutUsPics{
   display: inline-block;
-  height: 686px;
-  padding-left: 250px;
+  /* height: 686px; */
+  height: 250px;
+  padding-left: 200px;
+  
 }
-/* .left{    
+.left{    
   text-align: left;  
 }
 .right{
@@ -35,4 +40,4 @@ h4{
   padding: 25px;
   
   margin: 25px;
-} */
+} 
