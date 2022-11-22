@@ -43,10 +43,6 @@ Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('a
 
 
 
-//This route sends you to the landing page(welcome page of the site)
-Route::get('/', function () {
-    return view('welcome');
-});
 
 //Returns the add product view for the admin
 Route::get('/admin/create', function() {
@@ -81,4 +77,4 @@ Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/welcome', [DashboardController::class, 'index'])->name('welcome');
