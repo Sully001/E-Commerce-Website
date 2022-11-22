@@ -14,7 +14,7 @@
     
     <div class="row justify-content-center my-3">
         <div class="col-lg-5 col-md-8">
-            <form action="" method="POST">
+            <form action="/login" method="POST">
                 @csrf
                 <label for="email" class="form-label mt-2">Email</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
