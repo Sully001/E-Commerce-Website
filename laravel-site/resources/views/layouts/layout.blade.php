@@ -28,7 +28,7 @@
             </ul>
             <div class="navbar-login-signup">
                 @if (Auth::check())
-                <a href="/basket" class="navbar-login-link"><button class="btn btn-primary">Basket</button></a>
+                <a href="{{ route('basket', Session::get('id'))}}" class="navbar-login-link"><button class="btn btn-primary">Basket</button></a>
                 <a href="/logout" class="navbar-login-link"><button class="btn btn-primary">Log Out</button></a>
                 @else
                 <a href="/login" class="navbar-login-link"><button class="btn btn-primary">Log In</button></a>

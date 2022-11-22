@@ -25,6 +25,8 @@ class LoginController extends Controller
             $request->session()->regenerate();
             //Grabs users name into session
             session(['name' => auth()->user()->name]);
+            //Grabs user id
+            session(['id' => auth()->user()->id]);
             //HERE IDENTIFY IF USER IS AN ADMIN OR NOT
             //Get the value from the Admin column
             $isAdmin = auth()->user()->admin;

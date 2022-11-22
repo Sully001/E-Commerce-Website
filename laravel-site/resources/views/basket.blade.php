@@ -6,7 +6,8 @@
 
 @section('content')
     <div class="basket-main">
-        <h1>User's Basket</h1>
+        <h1>User {{ Session::get('id') }}'s Basket</h1>
+        <p>{{ $user->email}}</p>
         <div class="all-items-container">
             <div class="all-items">
                 <div class="individual-item">

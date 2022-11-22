@@ -5,6 +5,6 @@
 @endsection
 
 @section('content')
-<h1>Welcome - {{ Session::get('name') }}</h1>
+<h1>Welcome - {{ Session::get('name') }} - {{ Session::get('id') }}</h1>
 @endsection
     
