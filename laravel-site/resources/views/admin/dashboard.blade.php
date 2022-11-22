@@ -2,13 +2,17 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/dashboard.css" type="text/css">
+    <script src="/js/script.js" defer></script>
 @endsection
 
 @section('content')
-    <h1 style="text-align: center">Admin Dashboard</h1>
+    <div class="text-center">
+        <h2>View all Products</h2>
+        <p class="lead">Edit, Delete and View All Product Details</p>
+    </div>
 
     <nav class="nav nav-pills nav-fill">
-        <a class="nav-link active" href="/admin/dashboard">View Products</a>
+        <a class="nav-link" id="view-products" href="/admin/dashboard">View Products</a>
         <a class="nav-link" href="/admin/create">Add Product</a>
         <a class="nav-link" href="#">View Users</a>
         <a class="nav-link" href="#">All Orders</a>
@@ -52,8 +56,4 @@
         </tbody>
     </table>
     </div>
-    
-
-
-
 @endsection

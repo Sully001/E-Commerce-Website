@@ -2,21 +2,22 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/dashboard.css" type="text/css">
+    <script src="/js/script.js" defer></script>
 @endsection
 
 @section('content')
-    <nav class="nav nav-pills nav-fill">
-        <a class="nav-link active" href="/admin/dashboard">View Products</a>
-        <a class="nav-link" href="/admin/create">Add Product</a>
-        <a class="nav-link" href="#">View Users</a>
-        <a class="nav-link" href="#">All Orders</a>
-    </nav>
-
     <div class="container-lg mt-3">
         <div class="text-center">
             <h2>Add a Product</h2>
             <p class="lead">Add a Product and Fill All Details</p>
         </div>
+
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link" href="/admin/dashboard">View Products</a>
+            <a class="nav-link" id="create-product" href="/admin/create">Add Product</a>
+            <a class="nav-link" href="#">View Users</a>
+            <a class="nav-link" href="#">All Orders</a>
+        </nav>
         
         <div class="row justify-content-center my-3">
             <div class="col-lg-10 col-md-8 ">
