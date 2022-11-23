@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\BasketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,11 @@ Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('a
 
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
 
+////////Basket Routes///////////
+Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
+
+Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
+
 
 
 
@@ -70,14 +76,11 @@ Route::get('/about', function() {
     return view('about');
 });
 
+//Contact Route
 Route::get('/contact', function() {
     return view('contact');
 });
 
-
-Route::get('/basket', function() {
-    return view('basket');
-});
 
 Route::get("/admin/users", [AdminUserController::class, 'userIndex']);
 
