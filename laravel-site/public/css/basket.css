@@ -24,6 +24,7 @@ div h1 {
 
 .image-text-container {
     display: flex;
+    gap: 7px;
 }
 
 .name-item-num p {
@@ -89,4 +90,8 @@ div h1 {
 .checkout-txt {
     margin: 0;
     padding-right: 5px;
+}
+
+.bold {
+    font-weight: bold;
 }

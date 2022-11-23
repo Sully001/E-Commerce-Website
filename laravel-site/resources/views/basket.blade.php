@@ -9,24 +9,27 @@
         <h1>User {{ Session::get('id') }}'s Basket</h1>
         <div class="all-items-container">
             <div class="all-items">
-                <div class="individual-item">
-                    <div class="image-text-container">
-                        <img src="/images/AMD-Ryzen-5-5600X-3.7GHz.jpg" 
-                            alt="Image" width="100px" height="50px">
-                        <div class="name-item-num">
-                            <p>AMD AMD-Ryzen-5-5600X-3</p>
-                            <p>Product Number: 10</p>
+                @foreach($productsInfo as $product)
+                    <div class="individual-item">
+                        <div class="image-text-container">
+                            <img src="{{ asset('storage/'.$product['image']) }}" 
+                                alt="Image" width="70px" height="70px">
+                            <div class="name-item-num">
+                                <p class="bold">{{$product['name']}}</p>
+                                <p class="bold">Product Number: {{$product['id']}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="price-stock">
-                        <p>Price: £1999</p>
-                        <p>Quantity - 1</p>
-                        <div class="stock-check">
-                            <span class="dot"></span>
-                            <p>In Stock</p>
+
+                        <div class="price-stock">
+                            <p class="bold">Price: £{{$product['price']}}</p>
+                            <p class="bold">Quantity - {{$product['quantity']}}</p>
+                            <div class="stock-check">
+                                <span class="dot"></span>
+                                <p>In Stock</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        </div>
+                @endforeach
             </div>
             <div class="checkout-container">
                 <div>
@@ -49,6 +52,4 @@
             </div>
         </div>
     </div>
-
-    
 @endsection
