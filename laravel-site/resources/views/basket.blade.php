@@ -27,42 +27,6 @@
                         </div>
                     </div>
                 </div>
-    
-                <div class="individual-item">
-                    <div class="image-text-container">
-                        <img src="/images/AMD-Ryzen-5-5600X-3.7GHz.jpg" 
-                            alt="Image" width="100px" height="50px">
-                        <div class="name-item-num">
-                            <p>AMD AMD-Ryzen-5-5600X-3</p>
-                            <p>Product Number: 10</p>
-                        </div>
-                    </div>
-                    <div class="price-stock">
-                        <p>Price: £1999</p>
-                        <div class="stock-check">
-                            <span class="dot"></span>
-                            <p>In Stock</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="individual-item">
-                    <div class="image-text-container">
-                        <img src="/images/AMD-Ryzen-5-5600X-3.7GHz.jpg" 
-                            alt="Image" width="100px" height="50px">
-                        <div class="name-item-num">
-                            <p>AMD AMD-Ryzen-5-5600X-3</p>
-                            <p>Product Number: 10</p>
-                        </div>
-                    </div>
-                    <div class="price-stock">
-                        <p>Price: £1999</p>
-                        <div class="stock-check">
-                            <span class="dot"></span>
-                            <p>In Stock</p>
-                        </div>
-                        
-                    </div>
-                </div>
             </div>
             <div class="checkout-container">
                 <div>
@@ -85,4 +49,6 @@
             </div>
         </div>
     </div>
+
+    
 @endsection

@@ -7,7 +7,7 @@
 @section('content')
 @if(Session::has('message'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('message')}} - <a href="{{ route('basket', Session::get('id'))}}">View Basket?</a>
+        {{ Session::get('message')}} - <a href="{{ route('basket', Session::get('id'))}}" class="alert-link">View Basket?</a>
     </div>
 @endif
 

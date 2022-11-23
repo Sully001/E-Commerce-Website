@@ -11,14 +11,16 @@ class BasketController extends Controller
 {
     //
     public function index($id) {
-        $user = User::findorFail($id);
+        $basket = Basket::where('userID', $id)->get();
+
         return view('basket', [
-            'user' => $user,
+            'basket' => $basket,
         ]);
+            
     }
 
     //Adds product to the basket
-    public function add(Request $request) {
+    public function add() {
         $basket = new Basket();
 
         $basket->productid = request('productid');
