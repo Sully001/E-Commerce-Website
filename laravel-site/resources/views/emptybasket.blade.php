@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
-<h1>Your basket is empty</h1>
-<p>Go to <a href="/products">products to view items</a></p>
+<div class="text-center empty-basket">
+    <h2>Your basket is Empty</h2>
+    <p class="lead">Go to <a href="/products">Products To View and Add</a> to your basket</p>
+</div>
 @endsection

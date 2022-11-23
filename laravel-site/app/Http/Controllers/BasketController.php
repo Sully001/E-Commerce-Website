@@ -35,6 +35,7 @@ class BasketController extends Controller
                 'name' => $product->ProductName,
                 'price' => $product->Price,
                 'image' => $product->ImageURL,
+                'totalProductQuantity' => $product->Quantity,
                 'quantity' => $basket[$x]['quantity'],
             ]);
         }

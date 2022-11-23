@@ -95,3 +95,7 @@ div h1 {
 .bold {
     font-weight: bold;
 }
+
+.empty-basket {
+    background-color: grey;
+}
