@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,8 @@ Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 
 Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
 
-
+//CHECKOUT ROUTES////
+Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 
 
 

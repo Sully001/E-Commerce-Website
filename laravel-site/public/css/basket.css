@@ -1,5 +1,7 @@
 .basket-main {
     padding: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 div h1 {
@@ -29,6 +31,12 @@ div h1 {
 
 .name-item-num p {
     margin-top: 5px;
+}
+
+.name-item-num {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
