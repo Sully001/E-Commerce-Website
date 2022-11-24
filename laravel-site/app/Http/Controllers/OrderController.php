@@ -6,6 +6,7 @@ use App\Models\Basket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Order;
+use App\Http\Controllers\BasketController;
 
 class OrderController extends Controller
 {
@@ -31,5 +32,7 @@ class OrderController extends Controller
 
             $order->save();
         }
+        //Empties the basket after an order
+        Basket::where('userID', request('userid'))->delete();
     }
 }
