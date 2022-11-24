@@ -9,6 +9,7 @@ class Basket extends Model
 {
     use HasFactory;
 
+    protected $table = 'baskets';
     protected $primaryKey = "userID";
     public $timestamps = false;
 

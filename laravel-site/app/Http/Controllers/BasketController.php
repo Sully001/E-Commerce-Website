@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Basket;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Session;
 
@@ -48,12 +49,24 @@ class BasketController extends Controller
 
     //Adds product to the basket
     public function add() {
-        $basket = new Basket();
+        //If there exists a product already
+        //Get old quantity
+        if (DB::table('baskets')->where('userID', request('userid'))->where('productID', request('productid'))->exists()) {
+            $item = Basket::where('userID', request('userid'))->where('productID', request('productid'))->get();
+            //dd($item);
+            //Get the current quantity and add the new quantity
+            $oldQuantity = $item[0]['quantity'];
+            $newQuantity = $oldQuantity + intval(request('quantity'));
+        } else {
+            //Otherwise just use the new quantity
+            $newQuantity = request('quantity');
+        }
 
-        $basket->productid = request('productid');
-        $basket->userID = request('userid');
-        $basket->quantity = request('quantity');
-        $basket->save();
+
+        DB::table('baskets')->updateOrInsert(
+            ['userID' => request('userid'), 'productID' =>  request('productid')],
+            ['quantity' => $newQuantity]
+        );
         Session::flash('message', "Product Succesfully Added To Basket");
         return redirect()->back();
 
