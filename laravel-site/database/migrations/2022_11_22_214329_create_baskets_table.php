@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('userID');
             $table->integer('productID');
             $table->integer('quantity');
+            $table->decimal('price');
         });
     }
 

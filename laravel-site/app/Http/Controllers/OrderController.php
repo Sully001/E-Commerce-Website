@@ -29,6 +29,7 @@ class OrderController extends Controller
             $order->userID = intval(request('userid'));
             $order->productID = $items[$x]['productID'];
             $order->quantity = $items[$x]['quantity'];
+            $order->subtotal = ($items[$x]['quantity']) * ($items[$x]['price']);
 
             $order->save();
         }

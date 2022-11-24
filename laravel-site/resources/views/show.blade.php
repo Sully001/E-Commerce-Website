@@ -22,6 +22,7 @@
                     @csrf
                     <input type="hidden" name="productid" value="{{ $product->ProductID }}">
                     <input type="hidden" name="userid" value="{{ Session::get('id') }}">
+                    <input type="hidden" name="price" value="{{ $product->Price }}">
                     <label for="quantity">Quanity</label>
                     <select name="quantity" id="quantity">
                         <option selected="selected" value="1">1</option>

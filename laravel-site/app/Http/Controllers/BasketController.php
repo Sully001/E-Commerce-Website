@@ -64,7 +64,7 @@ class BasketController extends Controller
 
 
         DB::table('baskets')->updateOrInsert(
-            ['userID' => request('userid'), 'productID' =>  request('productid')],
+            ['userID' => request('userid'), 'productID' =>  request('productid'), 'price' => request('price')],
             ['quantity' => $newQuantity]
         );
         Session::flash('message', "Product Succesfully Added To Basket");
