@@ -35,5 +35,6 @@ class OrderController extends Controller
         }
         //Empties the basket after an order
         Basket::where('userID', request('userid'))->delete();
+        return view('checkout');
     }
 }

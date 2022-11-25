@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-<h1>Your check has been successful</h1>
+<h1>Your checkout has been successful</h1>
 @endsection
