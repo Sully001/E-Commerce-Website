@@ -30,7 +30,7 @@
                 @if (Auth::check())
                 <a href="{{ route('basket', Session::get('id'))}}" class="navbar-login-link">
                     <button class="btn btn-primary">
-                        Basket(0)
+                        Basket()
                     </button>
                 </a>
                 <a href="/logout" class="navbar-login-link"><button class="btn btn-primary">Log Out</button></a>

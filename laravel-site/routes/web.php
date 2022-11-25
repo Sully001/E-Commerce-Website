@@ -83,8 +83,11 @@ Route::get('/contact', function() {
     return view('contact');
 });
 
-
+//Page to view users of the website
 Route::get("/admin/users", [AdminUserController::class, 'userIndex']);
+
+//Page to view all orders from the order table.
+Route::get('/admin/orders', [AdminProductController::class, 'orderIndex'])->name('orders');
 
 //Route for register page.
 Route::get('/register', [RegisterController::class, 'index']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -69,5 +70,12 @@ class AdminProductController extends Controller
 
         $product->save();
         return redirect('admin/dashboard');
+    }
+
+    public function orderIndex() {
+        $orders = Order::all();
+        return view('admin.orders', [
+            'orders' => $orders,
+        ]);
     }
 }
