@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PreviousOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,8 +52,8 @@ Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
 Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 
 
-
-
+//PREVIOUS ORDERS ROUTE FOR USERS//
+Route::get('/previous-orders/{id}', [PreviousOrderController::class, 'getPreviousOrders'])->name('previous.orders');
 
 //This route sends you to the landing page(welcome page of the site)
 Route::get('/', function () {

@@ -1,0 +1,22 @@
+#accordion-body {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#accordionExample {
+   margin-left: 60px;
+   margin-right: 60px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+.subtotal {
+    display: flex;
+    align-items: center;
+}
+
+.button-div {
+    display: flex;
+    align-items: center;
+}

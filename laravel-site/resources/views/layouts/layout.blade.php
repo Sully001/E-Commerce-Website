@@ -44,7 +44,7 @@
                       Settings
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Previous Orders</a>
+                      <a class="dropdown-item" href="{{ route('previous.orders', Session::get('id')) }}">Previous Orders</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/logout">Logout</a>
                     </div>
