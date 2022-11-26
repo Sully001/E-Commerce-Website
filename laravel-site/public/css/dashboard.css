@@ -7,3 +7,8 @@ nav {
     border: 3px solid;
     border-radius: 10px;
 }
+
+
+body {
+    background-color: lightgray;
+}
