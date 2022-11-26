@@ -14,8 +14,8 @@
 <nav class="nav nav-pills nav-fill">
     <a class="nav-link" href="/admin/dashboard">View Products</a>
     <a class="nav-link" id="create-product" href="/admin/create">Add Product</a>
-    <a class="nav-link" href="/admin/users">View Users</a>
-    <a class="nav-link" href="/admin/orders" id="view-orders">All Orders</a>
+    <a class="nav-link" href="{{route('admin.users')}}">View Users</a>
+    <a class="nav-link" href="{{route('orders')}}" id="view-orders">All Orders</a>
 </nav>
 
 <div class="product-dashboard">
