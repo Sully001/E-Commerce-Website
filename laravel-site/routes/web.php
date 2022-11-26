@@ -55,6 +55,9 @@ Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout')
 //PREVIOUS ORDERS ROUTE FOR USERS//
 Route::get('/previous-orders/{id}', [PreviousOrderController::class, 'getPreviousOrders'])->name('previous.orders');
 
+Route::get('/previous-order-details/{id}', [PreviousOrderController::class, 'getPreviousOrderDetails'])->name('previous.details');
+
+
 //This route sends you to the landing page(welcome page of the site)
 Route::get('/', function () {
     return view('welcome');

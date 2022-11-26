@@ -5,7 +5,10 @@
 @endsection
 
 @section('content')
-<h1>This is the previous orders - User - {{ Session::get('id') }}</h1>
+<div class="text-center">
+    <h2>User {{ Session::get('id') }}'s Previous Orders</h2>
+    <p class="lead">Open Each Order and Click View Details To See More</p>
+</div>
 @for ($i = count($uniqueOrderID); $i > 0; $i--)
     <div id="container">
         <div class="accordion" id="accordionExample">
@@ -20,7 +23,7 @@
                     <div>
                         @for($x = count($orders) - 1; $x >= 0; $x--)
                             @if ($orders[$x]['orderID'] == $uniqueOrderID[($i - 1)]['orderID'])
-                                <p>Product ID - {{$orders[$x]['productID']}} ({{ $orders[$x]['quantity']}})</p>
+                                <p>Product ID - {{$orders[$x]['productID']}} (X {{ $orders[$x]['quantity']}})</p>
                             @endif
                         @endfor
                     </div>
@@ -28,7 +31,10 @@
                         <p>SubTotal - £2000</p>
                     </div>
                     <div class="button-div">
-                        <button class="btn btn-primary">View Details</button> 
+                        <form action="{{route('previous.details', $uniqueOrderID[($i-1)]['orderID'])}}">
+                            <button class="btn btn-primary">View Details</button>
+                        </form>
+                         
                     </div>
                 </div>
             </div>

@@ -21,4 +21,10 @@ class PreviousOrderController extends Controller
             'uniqueOrderID' => $uniqueOrderID,
         ]);
     }
+
+    public function getPreviousOrderDetails($id) {
+        return view('previous-order-details', [
+            'id' => $id,
+        ]);
+    }
 }
