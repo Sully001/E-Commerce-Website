@@ -71,4 +71,11 @@ class BasketController extends Controller
         return redirect()->back();
 
     }
+
+    public function destroy($id) {
+        Basket::where('userID', auth()->user()->id)
+        ->where('productID', $id)->delete();
+        Session::flash('remove', "Product Succesfully Removed From Basket");
+        return redirect()->back();
+    }
 }

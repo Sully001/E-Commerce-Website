@@ -7,7 +7,7 @@
 @section('content')
 <div class="text-center">
     <h2>User {{ auth()->user()->id }}'s Previous Orders</h2>
-    <p class="lead">Open Each Order and Click View Details To See More</p>
+    <p class="lead">Open Each Order and Click View Details To See The Important Details</p>
     <p class="lead">You Latest Orders Are At The Top!</p>
 </div>
 @for ($i = count($uniqueOrderID); $i > 0; $i--)
@@ -30,7 +30,7 @@
                         @endfor
                     </div>
                     <div class="subtotal">
-                        <p><strong>SubTotal - £2000</strong></p>
+                        <p><strong>Order Status: Complete</strong></p>
                     </div>
                     <div class="button-div">
                         <form action="{{route('previous.details', $uniqueOrderID[($i-1)]['orderID'])}}">

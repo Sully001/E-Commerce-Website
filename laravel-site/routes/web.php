@@ -44,8 +44,13 @@ Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('a
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
 
 ////////Basket Routes///////////
+//Route to get a specific basket
 Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 
+//Route for removing from basket
+Route::delete('/basket/remove/{id}', [BasketController::class, 'destroy'])->name('basket.remove');
+
+//Route for adding to basket
 Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
 
 //CHECKOUT ROUTES////

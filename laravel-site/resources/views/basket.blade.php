@@ -6,6 +6,11 @@
 
 @section('content')
     <h1>User {{ auth()->user()->id }}'s Basket</h1> 
+    @if(Session::has('remove'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('remove')}}"
+    </div>
+    @endif
     <div class="basket-main">
         <div class="all-items-container">
             <div class="all-items">
@@ -28,7 +33,14 @@
                                 <p>In Stock</p>
                             </div>
                         </div>
-                        </div>
+                        <div class="remove-container">
+                            <form action="{{ route('basket.remove', $product['id'])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">Remove</button>
+                            </form>
+                        </div> 
+                    </div>
                 @endforeach
             </div>
             
