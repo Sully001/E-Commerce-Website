@@ -50,3 +50,10 @@ a {
     padding-right: 5px;
 }
 
+.in-stock {
+    color: rgb(11, 200, 11);
+}
+
+.out-stock {
+    color: red;
+}

@@ -20,9 +20,9 @@
                 <div class="price-stock">
                     <p class="product-price">£{{ $product->Price}}</p>
                     @if ($product->Quantity > 0)
-                        <p>In Stock</p>
+                        <p class="in-stock">In Stock</p>
                     @else
-                        <p>Out of Stock</p>
+                        <p class="out-stock">Out of Stock</p>
                     @endif
                 </div>
                 
