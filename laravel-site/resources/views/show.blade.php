@@ -13,7 +13,7 @@
 
 @if(session('stock'))
 <div class="alert alert-danger" role="alert">
-   <strong><p>Sorry There's Only {{ session('stock') }} of This Item left! Please Reduce Your Quantity</p></strong>
+   <strong><p>Sorry There's Only {{ session('stock') }} of This Item left!</p></strong>
    <strong><p>Please Reduce Your Quantity</p></strong>
 </div>
 @endif
