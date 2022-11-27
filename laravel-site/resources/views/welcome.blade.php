@@ -13,9 +13,6 @@
 
 
 
-<!-- <div class="ViewProducts">
-    <p>Click the button to View our Products!</p>
-</div> -->
 <div class="product">
 <a href="products"><productRedirect>View our Products</productRedirect></a>
 </div>  
