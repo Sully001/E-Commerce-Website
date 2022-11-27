@@ -13,10 +13,23 @@ class PreviousOrderController extends Controller
         //Get all unqie order ID's that relate to a certain user
         $uniqueOrderID = Order::select('orderID')->where('userID', $id)->distinct()->get();
         //Get the rows where the orders for a specific user are
-        //dd($uniqueOrderID[7]);
-        $orders = Order::where('userID', $id)->get();
         
-        //dd($orders);
+        $orders = Order::where('userID', $id)->get();
+
+        //Get the total value of each order and store in an array
+        $subTotals = [];
+        //Start at the last position
+        // for($i = count($uniqueOrderID)- 1; $i >= 0; $i--) {
+        //     $temporarySubTotal = 0;
+        //     for ($x = count($orders) - 1; $x >= 0; $x--) {
+        //         if ($orders[$x]['orderID'] === $uniqueOrderID[$i]) {
+        //             $temporarySubTotal += $orders[$x]['subtotal'];
+        //         }
+        //         array_push($suTotals,[
+        //             [$temporarySubTotal],
+        //         ]);
+        //     }
+        // }
         return view('previousorders', [
             'orders' => $orders,
             'uniqueOrderID' => $uniqueOrderID,

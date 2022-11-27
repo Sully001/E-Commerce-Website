@@ -34,7 +34,7 @@
             </ul>
             <div class="navbar-login-signup">
                 @if (Auth::check())
-                <a href="{{ route('basket', Session::get('id'))}}" class="navbar-login-link">
+                <a href="{{ route('basket', auth()->user()->id)}}" class="navbar-login-link">
                     <button class="btn btn-primary">
                         Basket <span class="badge text-bg-secondary">0</span>
                     </button>
@@ -44,7 +44,7 @@
                       Settings
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="{{ route('previous.orders', Session::get('id')) }}">Previous Orders</a>
+                      <a class="dropdown-item" href="{{ route('previous.orders', auth()->user()->id) }}">Previous Orders</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/logout">Logout</a>
                     </div>
