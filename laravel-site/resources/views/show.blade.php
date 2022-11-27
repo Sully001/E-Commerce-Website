@@ -11,6 +11,12 @@
     </div>
 @endif
 
+@if(session('stock'))
+<div class="alert alert-danger" role="alert">
+   <strong><p>Sorry There's Only {{ session('stock') }} of This Item left! Please Reduce Your Quantity</p></strong>
+   <strong><p>Please Reduce Your Quantity</p></strong>
+</div>
+@endif
 <div class="product-container">
     <p class="product-name">{{$product->ProductName}}</p>
     <div class="product-main">

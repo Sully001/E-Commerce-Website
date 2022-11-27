@@ -8,7 +8,7 @@
     <h1>User {{ auth()->user()->id }}'s Basket</h1> 
     @if(Session::has('remove'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('remove')}}"
+        {{ Session::get('remove')}}
     </div>
     @endif
     <div class="basket-main">

@@ -51,7 +51,7 @@ Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'destroy'])->name('basket.remove');
 
 //Route for adding to basket
-Route::post('/basket', [BasketController::class, 'add'])->name('basket.add');
+Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
 
 //CHECKOUT ROUTES////
 Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');

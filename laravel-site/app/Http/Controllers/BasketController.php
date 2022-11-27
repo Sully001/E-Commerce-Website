@@ -62,12 +62,17 @@ class BasketController extends Controller
             $newQuantity = request('quantity');
         }
 
+        $product = Product::findorFail(request('productid'));
+        if($newQuantity > $product->Quantity) {
+            Session::flash('stock', $product->Quantity);
+            return redirect()->back();
+        }
 
         DB::table('baskets')->updateOrInsert(
             ['userID' => request('userid'), 'productID' =>  request('productid'), 'price' => request('price')],
             ['quantity' => $newQuantity]
         );
-        Session::flash('message', "Product Succesfully Added To Basket");
+        Session::flash('message', 'Product Succesfully Added To Basket');
         return redirect()->back();
 
     }
