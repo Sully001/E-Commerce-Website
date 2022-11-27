@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="text-center">
-    <h2>User {{ Session::get('id') }}'s Previous Orders</h2>
+    <h2>User {{ auth()->user()->id }}'s Previous Orders</h2>
     <p class="lead">Open Each Order and Click View Details To See More</p>
     <p class="lead">You Latest Orders Are At The Top!</p>
 </div>

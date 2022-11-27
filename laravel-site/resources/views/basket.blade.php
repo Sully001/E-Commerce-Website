@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h1>User {{ Session::get('id') }}'s Basket</h1> 
+    <h1>User {{ auth()->user()->id }}'s Basket</h1> 
     <div class="basket-main">
         <div class="all-items-container">
             <div class="all-items">
@@ -45,7 +45,7 @@
             <div>
                 <form action="{{ route('checkout')}}" method="POST">
                     @csrf
-                    <input type="hidden" name="userid" value="{{ Session::get('id') }}">
+                    <input type="hidden" name="userid" value="{{ auth()->user()->id }}">
                     <button class="btn btn-info checkout">
                         <p class="checkout-txt">Checkout</p>
                         <img class="cart-image" src="/images/shopping-cart.png" alt="Image of cart" height="15px" width="15px">

@@ -7,7 +7,7 @@
 @section('content')
 @if(Session::has('message'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('message')}} - <a href="{{ route('basket', Session::get('id'))}}" class="alert-link">View Basket?</a>
+        {{ Session::get('message')}} - <a href="{{ route('basket', auth()->user()->id)}}" class="alert-link">View Basket?</a>
     </div>
 @endif
 
@@ -21,7 +21,7 @@
                 <form action="{{ route('basket.add')}}" method="POST">
                     @csrf
                     <input type="hidden" name="productid" value="{{ $product->ProductID }}">
-                    <input type="hidden" name="userid" value="{{ Session::get('id') }}">
+                    <input type="hidden" name="userid" value="{{ auth()->user()->id }}">
                     <input type="hidden" name="price" value="{{ $product->Price }}">
                     <label for="quantity">Quanity</label>
                     <select name="quantity" id="quantity">
