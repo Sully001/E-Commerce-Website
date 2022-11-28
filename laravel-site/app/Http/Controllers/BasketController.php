@@ -28,6 +28,7 @@ class BasketController extends Controller
 
         //Instantiate array that will be sent to view
         $productsInfo = [];
+        $basketSubTotal = 0;
         //Store all info into associative array and push to an array
         for($x = 0; $x < count($productsArray); $x++) {
             $product = Product::findorFail($productsArray[$x]);
@@ -39,10 +40,12 @@ class BasketController extends Controller
                 'totalProductQuantity' => $product->Quantity,
                 'quantity' => $basket[$x]['quantity'],
             ]);
+            $basketSubTotal += (($basket[$x]['quantity']) * $product->Price);
         }
 
         return view('basket', [
             'productsInfo' => $productsInfo,
+            'basketSubTotal' => $basketSubTotal,
         ]);
             
     }
@@ -72,7 +75,7 @@ class BasketController extends Controller
             ['userID' => request('userid'), 'productID' =>  request('productid'), 'price' => request('price')],
             ['quantity' => $newQuantity]
         );
-        Session::flash('message', 'Product Succesfully Added To Basket');
+        Session::flash('message', 'Product Succesfully Added To The Basket');
 
         $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
         $basketCount = 0;
@@ -84,6 +87,10 @@ class BasketController extends Controller
         
         return redirect()->back();
     }
+
+
+
+
 
     public function destroy($id) {
         Basket::where('userID', auth()->user()->id)

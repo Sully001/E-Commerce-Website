@@ -29,7 +29,6 @@
                             <p class="bold">Price: £{{$product['price']}}</p>
                             <p class="bold">Quantity - {{$product['quantity']}}</p>
                             <div class="stock-check">
-                                <span class="dot"></span>
                                 <p>In Stock</p>
                             </div>
                         </div>
@@ -47,12 +46,7 @@
         </div>
         <div class="checkout-container">
             <div>
-                <p>Subtotal:</p>
-                <p>£5000</p>
-            </div>
-            <div>
-                <p>VAT (20%):</p>
-                <p>£20</p>
+                <strong><p>Subtotal: £{{ $basketSubTotal }}</p></strong>
             </div>
             <div>
                 <form action="{{ route('checkout')}}" method="POST">
@@ -65,9 +59,5 @@
                 </form>
             </div>
         </div>
-
-
-
-        
     </div>
 @endsection
