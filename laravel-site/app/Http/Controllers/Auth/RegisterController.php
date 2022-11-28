@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class RegisterController extends Controller
 {
@@ -32,6 +33,10 @@ class RegisterController extends Controller
         auth()->attempt($request->only('email', 'password'));
         //This takes the users name and adds it to the session variable (Suliman)
         session(['name' => auth()->user()->name]);
+
+        //Set basket to 0
+        session(['basket_count' => 0]);
+        Session::save();
 
         return redirect()->route('welcome');
     }

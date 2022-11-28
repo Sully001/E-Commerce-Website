@@ -30,6 +30,8 @@ class LoginController extends Controller
             session(['name' => auth()->user()->name]);
             //Grabs user id
             session(['id' => auth()->user()->id]);
+
+            //////////// GETTING BASKET COUNT FOR THE NAVBAR
             $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
             $basketCount = 0;
             for($i = 0; $i < count($basket); $i++) {
@@ -37,6 +39,8 @@ class LoginController extends Controller
             }
             session(['basket_count' => $basketCount]);
             Session::save();
+            ///////////
+            
             //HERE IDENTIFY IF USER IS AN ADMIN OR NOT
             //Get the value from the Admin column
             $isAdmin = auth()->user()->admin;
