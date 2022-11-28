@@ -12,9 +12,15 @@
 @endif
 
 @if(session()->exists('stock'))
+    @if(Session::get('stock') == 0)
+        <div class="alert alert-danger" role="alert">
+            <strong><p>This item is no longer in stock</p></strong>
+        </div>
+    @else
     <div class="alert alert-danger" role="alert">
-    <strong><p>Sorry There's Only {{ Session::get('stock') }} of This Item left!</p></strong>
+        <strong><p>Sorry There's Only {{ Session::get('stock') }} of This Item left!</p></strong>
     </div>
+    @endif
 @endif
 <div class="product-container">
     <p class="product-name">{{$product->ProductName}}</p>
