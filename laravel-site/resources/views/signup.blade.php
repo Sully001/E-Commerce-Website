@@ -26,8 +26,16 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required>
 
                 <label for="password_confirmation" class="form-label mt-2">Retype Password</label>
-                <input type="password" id="password" name="password_confirmation" class="form-control" placeholder="Retype your password" required>
-                
+                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Retype your password" required>
+                <div class="errorCheck">
+                    @if($errors->any())
+                        <div class="statusCheck">
+                         @foreach ($errors->all() as $error)
+                                <p>{{$error}}</p>
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
                 <button type="submit" class="btn btn-primary mt-2">Sign Up</button>
                 </div>
             </form>

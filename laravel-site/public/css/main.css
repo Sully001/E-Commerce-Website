@@ -54,3 +54,18 @@ body {
     text-decoration: none;
 }
 
+.errorCheck{
+    color: white;
+    text-align: center;
+}
+
+.statusCheck{
+    margin: auto;
+    background-color: red;
+    width: 350px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border: 3px solid black;
+}
+
