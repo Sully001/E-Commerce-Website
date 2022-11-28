@@ -38,8 +38,10 @@ class LoginController extends Controller
             return redirect()->intended('welcome');
         }
 
-        return back()->withErrors([
-            'email' => 'Your E-Mail or password is incorrect. Please try again.',
-        ])->onlyInput('email');
+        //Error checking
+        if (!auth()->attempt($request->only('email', 'password'))) {
+            return back()->with('status', 'Incorrect Login Details. Please try again.');
+        }
+
     }
 }
