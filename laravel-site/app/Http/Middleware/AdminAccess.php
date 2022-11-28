@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminAccess
 {
@@ -16,6 +17,12 @@ class AdminAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+
+        if(Auth::user() && Auth::user()->admin == "Admin") {
+            return $next($request);
+        }
+        
+        return redirect('/')->with('bounds','You dont have permission for this area');
+
     }
 }
