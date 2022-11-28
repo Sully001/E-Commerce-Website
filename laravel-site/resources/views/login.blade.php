@@ -11,7 +11,13 @@
         <h2>Welcome To Hardware 28 Online Store</h2>
         <p class="lead">Sign In to Shop For All The Latest Products</p>
     </div>
-    
+    <div class="errorCheck">
+        @if (session('status'))
+            <div class="statusCheck">
+                {{session('status')}}
+            </div>
+        @endif
+    </div>
     <div class="row justify-content-center my-3">
         <div class="col-lg-5 col-md-8">
             <form action="/login" method="POST">
