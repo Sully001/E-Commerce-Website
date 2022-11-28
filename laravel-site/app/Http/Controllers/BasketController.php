@@ -69,13 +69,15 @@ class BasketController extends Controller
         if($newQuantity > $product->Quantity) {
             Session::flash('stock', $product->Quantity);
             return redirect()->back();
-        }
-
-        DB::table('baskets')->updateOrInsert(
+        } else {
+            DB::table('baskets')->updateOrInsert(
             ['userID' => request('userid'), 'productID' =>  request('productid'), 'price' => request('price')],
             ['quantity' => $newQuantity]
         );
-        Session::flash('message', 'Product Succesfully Added To The Basket');
+            Session::flash('message', 'Product Succesfully Added To The Basket');
+        }
+
+        
 
         $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
         $basketCount = 0;
@@ -83,7 +85,6 @@ class BasketController extends Controller
             $basketCount += $basket[$i]['quantity'];
         }
         session(['basket_count' => $basketCount]);
-        Session::save();
         
         return redirect()->back();
     }
