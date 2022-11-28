@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PreviousOrderController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +35,12 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
 //Returns the dashboard view of the admin page
-Route::get('/admin/dashboard', [AdminProductController::class, 'adminIndex']);
+Route::get('/admin/dashboard', [AdminProductController::class, 'adminIndex'])->middleware('admin');
 
 //Admin route to delete a product
 Route::delete('/admin/dashboard/{id}', [AdminProductController::class, 'destroy'])->name('admin.destroy');
 
-Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit');
+Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit')->middleware('admin');
 
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
 
@@ -71,7 +72,7 @@ Route::get('/', function () {
 //Returns the add product view for the admin
 Route::get('/admin/create', function() {
     return view('admin.create');
-});
+})->middleware('admin');
 //Route for login
 Route::get('/login', function() {
     return view('login');
@@ -93,10 +94,10 @@ Route::get('/contact', function() {
 });
 
 //Page to view users of the website
-Route::get("/admin/users", [AdminUserController::class, 'userIndex'])->name('admin.users');
+Route::get("/admin/users", [AdminUserController::class, 'userIndex'])->name('admin.users')->middleware('admin');
 
 //Page to view all orders from the order table.
-Route::get('/admin/orders', [AdminProductController::class, 'orderIndex'])->name('orders');
+Route::get('/admin/orders', [AdminProductController::class, 'orderIndex'])->name('orders')->middleware('admin');
 
 //Route for register page.
 Route::get('/register', [RegisterController::class, 'index']);
