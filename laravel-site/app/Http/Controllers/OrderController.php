@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Basket;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Order;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\BasketController;
-use App\Models\Product;
 
 class OrderController extends Controller
 {
@@ -40,6 +41,8 @@ class OrderController extends Controller
         }
         //Empties the basket after an order
         Basket::where('userID', request('userid'))->delete();
+        session(['basket_count' => 0]);
+        Session::save();
         return view('checkout');
     }
 }
