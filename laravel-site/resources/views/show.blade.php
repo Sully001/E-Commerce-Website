@@ -32,7 +32,9 @@
                 <form action="{{ route('basket.add')}}" method="POST">
                     @csrf
                     <input type="hidden" name="productid" value="{{ $product->ProductID }}">
+                    @if(Auth::check())
                     <input type="hidden" name="userid" value="{{ auth()->user()->id }}">
+                    @endif
                     <input type="hidden" name="price" value="{{ $product->Price }}">
                     <label for="quantity">Quanity</label>
                     <select name="quantity" id="quantity">
