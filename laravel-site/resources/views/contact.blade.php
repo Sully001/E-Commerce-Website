@@ -5,34 +5,29 @@
 @endsection
 
 @section('content')
-<div class="ContactUs">
-<h1>Contact Us</h1>
+<div class="header">
+    <h1>Contact Us</h3>
+    <h4 id="desc">Have any further questions? feel free to contact us!</h4>
 </div>
-<div class="furtherquestions">
-<p>Have any further questions? feel free to contact us!</p>
-</div>
-
-<div class="splitText">
-</div>
-
-<a href="https://outlook.live.com/owa/">
-<img class="E-Mail" src="/images/outlook-favicon.png" alt="E-Mail Image">
-
-
-<a href="https://github.com/Sully001/E-Commerce-Website">
-<img class="Github" src="/images/github-favicon.png" alt="Github Image">
-
-<a href="https://www.aston.ac.uk/">
-<img class="Address" src="/images/location-favicon.png" alt="Address">
-<div class="p">
     
-</a>
-    
-<h6>200070104@aston.ac.uk
-    <div class="h6a">    
-    Github
-    <div class="h6b">  
-    Aston St, Birmingham B4 7ET
-</h6>
-</div></div></div>      
+<div class="container">
+    <div class="email">
+        <a href="https://outlook.live.com/owa/" style="text-decoration: none; color: #000;">
+            <img class="img" id="img1" src="/images/outlook-favicon.png">
+        </a>
+        <p>200070104@aston.ac.uk</p>
+    </div>
+    <div class="github">
+        <a href="https://github.com/Sully001/E-Commerce-Website" style="text-decoration: none; color: #000;">
+            <img class="img" id="img2" src="/images/github-favicon.png">
+        </a>
+        <p>Github</p>
+    </div>
+    <div class="address">
+        <a href="https://www.aston.ac.uk/" style="text-decoration: none; color: #000;">
+            <img class="img" id="img3" src="/images/location-favicon.png">
+        </a>
+        <p>Aston St, Birmingham B4 7ET</p>
+    </div>
+</div>
 @endsection
