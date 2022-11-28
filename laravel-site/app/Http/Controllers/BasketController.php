@@ -73,14 +73,31 @@ class BasketController extends Controller
             ['quantity' => $newQuantity]
         );
         Session::flash('message', 'Product Succesfully Added To Basket');
-        return redirect()->back();
 
+        $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
+        $basketCount = 0;
+        for($i = 0; $i < count($basket); $i++) {
+            $basketCount += $basket[$i]['quantity'];
+        }
+        session(['basket_count' => $basketCount]);
+        Session::save();
+        
+        return redirect()->back();
     }
 
     public function destroy($id) {
         Basket::where('userID', auth()->user()->id)
         ->where('productID', $id)->delete();
         Session::flash('remove', "Product Succesfully Removed From Basket");
+
+        $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
+        $basketCount = 0;
+        for($i = 0; $i < count($basket); $i++) {
+            $basketCount += $basket[$i]['quantity'];
+        }
+        session(['basket_count' => $basketCount]);
+        Session::save();
+        
         return redirect()->back();
     }
 }

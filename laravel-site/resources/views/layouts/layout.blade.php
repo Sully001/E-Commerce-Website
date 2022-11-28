@@ -36,7 +36,10 @@
                 @if (Auth::check())
                 <a href="{{ route('basket', auth()->user()->id)}}" class="navbar-login-link">
                     <button class="btn btn-primary">
-                        Basket <span class="badge text-bg-secondary">0</span>
+                        Basket
+                        @if(Session::has('basket_count'))
+                            <span class="badge text-bg-secondary">{{ Session::get('basket_count')}}</span>
+                        @endif 
                     </button>
                 </a>
                 <div class="btn-group">

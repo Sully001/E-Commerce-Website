@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\Basket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -29,6 +30,13 @@ class LoginController extends Controller
             session(['name' => auth()->user()->name]);
             //Grabs user id
             session(['id' => auth()->user()->id]);
+            $basket = Basket::select('quantity')->where('userID', auth()->user()->id)->get();
+            $basketCount = 0;
+            for($i = 0; $i < count($basket); $i++) {
+                $basketCount += $basket[$i]['quantity'];
+            }
+            session(['basket_count' => $basketCount]);
+            Session::save();
             //HERE IDENTIFY IF USER IS AN ADMIN OR NOT
             //Get the value from the Admin column
             $isAdmin = auth()->user()->admin;
