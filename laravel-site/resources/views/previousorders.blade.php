@@ -5,6 +5,11 @@
 @endsection
 
 @section('content')
+@if(Session::has('access'))
+    <div class="alert alert-warning" role="alert">
+        {{ Session::get('access')}}
+    </div>
+@endif
 <div class="text-center">
     <h2>User {{ auth()->user()->id }}'s Previous Orders</h2>
     <p class="lead">Open Each Order and Click View Details To See The Important Details</p>
@@ -34,6 +39,7 @@
                     </div>
                     <div class="button-div">
                         <form action="{{route('previous.details', $uniqueOrderID[($i-1)]['orderID'])}}">
+                            <input type="hidden" name="userid" value="{{auth()->user()->id}}">
                             <button class="btn btn-primary">View Details</button>
                         </form>
                          
