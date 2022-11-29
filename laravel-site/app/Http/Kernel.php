@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\AdminAccess::class,
         'ensure.id' => \App\Http\Middleware\EnsureUserID::class,
         'ensure.order' => \App\Http\Middleware\EnsureOrderIsValid::class,
+        'reject' => \App\Http\Middleware\rejectAccess::class,
     ];
 }
