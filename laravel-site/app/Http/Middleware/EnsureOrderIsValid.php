@@ -5,9 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use App\Models\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
-class EnsureUserID
+class EnsureOrderIsValid
 {
     /**
      * Handle an incoming request.
@@ -17,15 +16,11 @@ class EnsureUserID
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {
-        if($request->id == auth()->user()->id) {
-            return $next($request);
-        } 
-        if ($request['userid'] == auth()->user()->id) {
+    {   
+        if(Order::where('orderID', $request->id)->where('userID', $request['userid'])->exists()) {
             return $next($request);
         }
-
-            Session::flash('access', 'You cannot access this resource');
-            return redirect()->back();
+        
+        return redirect()->back();
     }
 }

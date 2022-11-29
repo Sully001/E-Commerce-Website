@@ -79,7 +79,7 @@ Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout')
 //PREVIOUS ORDERS ROUTE FOR USERS//
 Route::get('/previous-orders/{id}', [PreviousOrderController::class, 'getPreviousOrders'])->name('previous.orders')->middleware(['auth', 'ensure.id']);
 
-Route::get('/previous-order-details/{id}', [PreviousOrderController::class, 'getPreviousOrderDetails'])->name('previous.details')->middleware(['auth', 'ensure.id']);
+Route::get('/previous-order-details/{id}', [PreviousOrderController::class, 'getPreviousOrderDetails'])->name('previous.details')->middleware(['auth', 'ensure.order']);
 
 
 
