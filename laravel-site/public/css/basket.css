@@ -1,6 +1,7 @@
 .basket-main {
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
@@ -14,7 +15,6 @@ div h1 {
 .individual-item {
     border-radius: 10px;
     border: 10px grey;
-    width: 700px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
@@ -73,10 +73,15 @@ div h1 {
     gap: 15px;
 
 }
+.all-items {
+    display: flex;
+    flex-direction: column;
+}
 
 .checkout-container {
     border: 2px solid;
     width: 200px;
+    height: 100px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
