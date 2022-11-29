@@ -22,7 +22,7 @@ class AdminAccess
             return $next($request);
         }
         
-        return redirect('/')->with('bounds','You dont have permission for this area');
+        return redirect('/login')->with('bounds','You dont have permission for this area');
 
     }
 }
