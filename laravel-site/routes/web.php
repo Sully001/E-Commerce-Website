@@ -42,6 +42,9 @@ Route::get('/admin/dashboard', [AdminProductController::class, 'adminIndex'])->m
 //Admin route to delete a product
 Route::delete('/admin/dashboard/{id}', [AdminProductController::class, 'destroy'])->name('admin.destroy');
 
+//Admin route kicks out URL typing
+Route::get('admin/dashboard/{id}', [AdminProductController::class, 'destroy'])->middleware('reject');
+
 Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit')->middleware('admin');
 
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
@@ -67,12 +70,17 @@ Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket')->
 //Route for removing from basket
 Route::delete('/basket/remove/{id}', [BasketController::class, 'destroy'])->name('basket.remove')->middleware(['auth', 'ensure.id']);
 
+//Route for rejecting URL writing
+Route::get('/basket/remove/{id}', [BasketController::class, 'destroy'])->middleware('reject');
+
 //Route for adding to basket
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')->middleware(['auth', 'ensure.id']);
 
 //CHECKOUT ROUTES////
 Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout')->middleware(['auth']);
 
+//Route for if users type it into URL.
+Route::get('/checkout', [OrderController::class, 'checkout'])->middleware('reject');
 
 
 
