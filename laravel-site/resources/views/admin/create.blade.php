@@ -37,7 +37,7 @@
                     <textarea name="description" class="form-control" id="description" required></textarea>
 
                     <label for="category" class="form-label mt-2">Choose a Relevant Product Category</label>
-                    <select name="categories" id="categories" class="form-select">
+                    <select name="categories" id="categories" class="form-select" required>
                         <option value="Category" selected>Choose a cateogry</option>
                         <option value="GPU">GPU</option>
                         <option value="CPU">CPU</option>
@@ -49,7 +49,7 @@
                     </select>
                     
                     <label for="image" class="form-label mt-3">Upload Product Image</label>
-                    <input type="file" name="image" id="image" class="form-control">
+                    <input type="file" name="image" id="image" class="form-control" required>
 
                     <div class="mb-4 mt-5 text-center">
                         <button type="submit" class="btn btn-primary">Submit</button>

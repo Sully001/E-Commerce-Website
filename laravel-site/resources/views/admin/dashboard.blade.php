@@ -6,6 +6,21 @@
 @endsection
 
 @section('content')
+@if(Session::has('delete_product'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('delete_product')}}
+    </div>
+@endif
+@if(Session::has('store_product'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('store_product')}}
+    </div>
+@endif
+@if(Session::has('edit_product'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('edit_product')}}
+    </div>
+@endif
     <div class="text-center">
         <h2>View all Products</h2>
         <p class="lead">Edit, Delete and View All Product Details</p>
