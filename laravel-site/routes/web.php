@@ -42,14 +42,14 @@ Route::get('/admin/dashboard', [AdminProductController::class, 'adminIndex'])->m
 //Admin route to delete a product
 Route::delete('/admin/dashboard/{id}', [AdminProductController::class, 'destroy'])->name('admin.destroy');
 
-Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit')->middleware('admin');
+Route::get('/admin/edit/{id}', [AdminProductController::class, 'show'])->name('admin.edit');
 
 Route::post('admin/edit/{id}', [AdminProductController::class, 'edit'])->name('admin.edited');
 
 //Returns the add product view for the admin
 Route::get('/admin/create', function() {
     return view('admin.create');
-});
+})->middleware('admin');
 
 //Page to view users of the website
 Route::get("/admin/users", [AdminUserController::class, 'userIndex'])->name('admin.users');
