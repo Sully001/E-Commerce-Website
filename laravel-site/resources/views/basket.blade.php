@@ -15,7 +15,10 @@
         {{ Session::get('access')}}
     </div>
     @endif
-    <h1>User {{ auth()->user()->id }}'s Basket</h1> 
+    <div class="text-center">
+        <h2 class="basket-name">{{ auth()->user()->name }}'s Basket</h2> 
+        <p class="lead">Checkout or Shop for More</p>
+    </div>
     <div class="basket-main">
         <div class="all-items-container">
             <div class="all-items">

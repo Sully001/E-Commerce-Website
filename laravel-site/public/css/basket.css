@@ -114,3 +114,7 @@ div h1 {
     align-items: center;
     padding-right: 5px;
 }
+
+.basket-name {
+    font-weight: bold;
+}

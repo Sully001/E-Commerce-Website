@@ -44,7 +44,7 @@
                 </a>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Settings
+                        {{auth()->user()->name}}
                     </button>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ route('previous.orders', auth()->user()->id) }}">Previous Orders</a>
