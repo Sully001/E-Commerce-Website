@@ -6,6 +6,11 @@
 @endsection
 
 @section('content')
+@if(Session::has('permissions'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('permissions')}}
+    </div>
+@endif
     <div class="text-center">
         <h2>View All Users</h2>
         <p class="lead">View All Users Currently on The Platform</p>
@@ -26,6 +31,8 @@
                 <th scope="col">User Name</th>
                 <th scope="col">User Email</th>
                 <th scope="col">User Created At</th>
+                <th scope="col">Admin Or User</th>
+                <th scope="col">Update Permissions</th>
             </tr>
         </thead>
         <tbody>
@@ -35,7 +42,30 @@
                 <th scope="row">{{ $user->name}}</th>
                 <th scope="row">{{ $user->email}}</th>
                 <th scope="row">{{ $user->created_at }}</th>
+                <th scope="row">
+                @if($user->id == 1)
+                    <p>Admin</p>
+                @else
+                <form action="{{ route('permissions.update', $user->id)}}" method="POST">
+                    @csrf
+                    <select name="permissions" id="permissions" class="form-select">
+                        @if($user->admin == "Admin")
+                            <option selected value="Admin">Admin</option>
+                            <option value="User">User</option>
+                        @else
+                            <option selected value="User">User</option>
+                            <option value="Admin">Admin</option>
+                        @endif
+                    </select>
+                </th>
+                <th scope="row">
+                    @if($user->id != 1)
+                    <button class="btn btn-warning">Update Permission</button>
+                    @endif
+                </th>
+            </form>
             </tr>
+            @endif
             @endforeach
         </tbody>
     </table>

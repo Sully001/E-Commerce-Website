@@ -60,7 +60,10 @@ Route::get("/admin/users", [AdminUserController::class, 'userIndex'])->name('adm
 //Page to view all orders from the order table.
 Route::get('/admin/orders', [AdminProductController::class, 'orderIndex'])->name('orders')->middleware('admin');
 
+//Routes for changing user permissions and rejecting the get request
+Route::post('/admin/update/permissions/{id}', [AdminUserController::class, 'updatePermission'])->name('permissions.update')->middleware('admin');
 
+Route::get('/admin/update/permissions/{id}', [AdminUserController::class, 'updatePermission'])->name('permissions.update')->middleware('reject');
 
 
 ////////Basket Routes///////////
