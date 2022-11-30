@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<div class="imageLogo">
+    <img src="images/h28.png" class="img" width="500" height="500">
+</div>
 <div class="Welcome">
     <h1>Welcome to Hardware28</h1>
 </div>
