@@ -108,4 +108,10 @@ class BasketController extends Controller
         
         return redirect()->back();
     }
+
+    public function removeAll($id) {
+        Basket::where('userID', $id)->delete();
+        session(['basket_count' => 0]);
+        return redirect()->back();
+    }
 }

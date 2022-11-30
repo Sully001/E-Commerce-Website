@@ -19,6 +19,13 @@
         <h2 class="basket-name">{{ auth()->user()->name }}'s Basket</h2> 
         <p class="lead">Checkout or Shop for More</p>
     </div>
+    <div class="remove-all-button">
+        <form action="{{ route('basket.removeAll', auth()->user()->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger">Remove All Items</button>
+        </form>
+    </div>
     <div class="basket-main">
         <div class="all-items-container">
             <div class="all-items">
