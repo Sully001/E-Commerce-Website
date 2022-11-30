@@ -76,7 +76,9 @@ Route::get('/basket/remove/{id}', [BasketController::class, 'destroy'])->middlew
 //Route for adding to basket
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')->middleware(['auth', 'ensure.id']);
 
-Route::delete('basket/removeAll/{id}', [BasketController::class, 'removeAll'])->name('basket.removeAll')->middleware(['auth']);
+Route::delete('basket/removeAll/{id}', [BasketController::class, 'removeAll'])->name('basket.removeAll')->middleware(['auth', 'ensure.id']);
+
+Route::get('/basket/removeAll/{id}', [BasketController::class, 'removeAll'])->name('basket.removeAll')->middleware('reject');
 
 //CHECKOUT ROUTES////
 Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout')->middleware(['auth']);
