@@ -26,6 +26,21 @@ class AdminProductController extends Controller
         ]);
     }
 
+    public function restoreIndex() {
+        $products = Product::onlyTrashed()->get();
+        //dd($products[0]['ProductID']);
+        return view('admin.restore-products', [
+            'products' => $products,
+        ]);
+    }
+
+    public function restoreProduct($id) {
+        $product = Product::onlyTrashed()->findOrFail($id);
+        $product->restore();
+        Session::flash('restored', 'Product Has Been Restored');
+        return redirect()->back();
+    }
+
     //Storing Product Data
     public function store(Request $request) {
         $product = new Product();

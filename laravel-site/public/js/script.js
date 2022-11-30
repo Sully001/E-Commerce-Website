@@ -17,3 +17,8 @@ if (window.location.href.includes("/admin/orders")) {
     const button = document.querySelector('#view-orders');
     button.classList.add('active');
 }
+
+if (window.location.href.includes("/admin/restore")) {
+    const button = document.querySelector('#restore-order');
+    button.classList.add('active');
+}

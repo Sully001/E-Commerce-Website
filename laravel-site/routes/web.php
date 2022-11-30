@@ -60,8 +60,20 @@ Route::get("/admin/users", [AdminUserController::class, 'userIndex'])->name('adm
 //Page to view all orders from the order table.
 Route::get('/admin/orders', [AdminProductController::class, 'orderIndex'])->name('orders')->middleware('admin');
 
+//Routes for changing user permissions and rejecting the get request
+Route::post('/admin/update/permissions/{id}', [AdminUserController::class, 'updatePermission'])->name('permissions.update')->middleware('admin');
+
+Route::get('/admin/update/permissions/{id}', [AdminUserController::class, 'updatePermission'])->name('permissions.update')->middleware('reject');
 
 
+//Restoring product routes
+Route::get('/admin/restore', [AdminProductController::class, 'restoreIndex'])->name('restore.index')->middleware('admin');
+
+//Restore product route
+Route::post('/admin/restore/{id}', [AdminProductController::class, 'restoreProduct'])->name('restore.product')->middleware('admin');
+
+//Reject route for admin restore
+Route::get('/admin/restore/{id}', [AdminProductController::class, 'restoreProduct'])->name('restore.product')->middleware('reject');
 
 ////////Basket Routes///////////
 //Route to get a specific basket
