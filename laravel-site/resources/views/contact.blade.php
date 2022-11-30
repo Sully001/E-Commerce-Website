@@ -7,7 +7,7 @@
 @section('content')
 <div class="header">
     <h1>Contact Us</h3>
-    <h4 id="desc">Have any further questions? feel free to contact us!</h4>
+    <h4 id="desc">Have any further questions? Feel free to contact us!</h4>
 </div>
     
 <div class="container">
