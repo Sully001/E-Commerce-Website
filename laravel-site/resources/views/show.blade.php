@@ -54,9 +54,9 @@
             <p>{{ $product->Description }}</p>
 
             @if ($product->Quantity > 0)
-                <h4>In Stock</h4>
+                <h4 class="in-stock">In Stock</h4>
             @else
-                <h4>Out of Stock</h4>
+                <h4 class="out-stock">Out of Stock</h4>
             @endif
         </div>
         

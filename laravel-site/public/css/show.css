@@ -30,4 +30,11 @@
     margin-top: 10px;
 }
 
+.in-stock {
+    color: rgb(11, 200, 11);
+}
+
+.out-stock {
+    color: red;
+}
 
