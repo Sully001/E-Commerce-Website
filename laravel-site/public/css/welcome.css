@@ -1,9 +1,7 @@
 .Welcome {
   display: flex;
   justify-content: center; 
-  align-items: center; 
-  margin-top: 330px;
-  
+  align-items: center;  
   padding: 10px;
 }
 
@@ -43,6 +41,12 @@ productRedirect:hover {
 
 .product{
   border: 39px solid rgb(255, 255, 255);
+}
+
+.imageLogo{
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
  
  
