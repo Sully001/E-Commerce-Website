@@ -6,34 +6,22 @@
 @endsection
 
 @section('content')
-@if(Session::has('delete_product'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('delete_product')}}
-    </div>
-@endif
-@if(Session::has('store_product'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('store_product')}}
-    </div>
-@endif
-@if(Session::has('edit_product'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('edit_product')}}
-    </div>
-@endif
+    @if(Session::has('restored'))
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('restored')}}
+        </div>
+    @endif
     <div class="text-center">
-        <h2>View all Products</h2>
-        <p class="lead">Edit, Delete and View All Product Details</p>
+        <h2>Click Restore To Restore A Deleted Product</h2>
     </div>
 
     <nav class="nav nav-pills nav-fill">
-        <a class="nav-link" id="view-products" href="/admin/dashboard">View Products</a>
+        <a class="nav-link" href="/admin/dashboard">View Products</a>
         <a class="nav-link" href="/admin/create">Add Product</a>
         <a class="nav-link" href="{{route('admin.users')}}">View Users</a>
         <a class="nav-link" href="{{route('orders')}}">All Orders</a>
         <a class="nav-link" id="restore-order" href="{{route('restore.index')}}">Restore Orders</a>
     </nav>
-    
     <div class="product-dashboard">
         <table class="table table-striped ">
         <thead>
@@ -43,7 +31,6 @@
                 <th scope="col">Price </th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Product Category</th>
-                <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -56,20 +43,13 @@
                 <th scope="row">{{ $product->Quantity }}</th>
                 <th scope="row">{{ $product->CategoryName }}</th>
                 <th scope="row">
-                    <a href="{{ route('admin.edit', $product->ProductID)}}">
-                        <button class="btn btn-warning">Edit</button>
-                    </a>
-                </th>
-                <th scope="row">
-                    <form action="{{ route('admin.destroy', $product->ProductID) }}" method="POST">
+                    <form action="{{ route('restore.product', $product->ProductID) }}" method="POST">
                         @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?')">Delete</button>
+                        <button class="btn btn-warning" onclick="return confirm('Are you sure you want to restore this?')">Restore</button>
                     </form>
                 </th>
             </tr>
             @endforeach
         </tbody>
     </table>
-    </div>
 @endsection

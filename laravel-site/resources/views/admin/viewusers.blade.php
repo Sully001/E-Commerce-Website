@@ -21,6 +21,7 @@
         <a class="nav-link" id="create-product" href="/admin/create">Add Product</a>
         <a class="nav-link" id="view-users" href="{{route('admin.users')}}">View Users</a>
         <a class="nav-link" href="{{route('orders')}}">All Orders</a>
+        <a class="nav-link" id="restore-order" href="{{route('restore.index')}}">Restore Orders</a>
     </nav>
 
     <div class="user-dashboard">

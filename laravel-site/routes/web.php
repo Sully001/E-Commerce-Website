@@ -66,6 +66,15 @@ Route::post('/admin/update/permissions/{id}', [AdminUserController::class, 'upda
 Route::get('/admin/update/permissions/{id}', [AdminUserController::class, 'updatePermission'])->name('permissions.update')->middleware('reject');
 
 
+//Restoring product routes
+Route::get('/admin/restore', [AdminProductController::class, 'restoreIndex'])->name('restore.index')->middleware('admin');
+
+//Restore product route
+Route::post('/admin/restore/{id}', [AdminProductController::class, 'restoreProduct'])->name('restore.product')->middleware('admin');
+
+//Reject route for admin restore
+Route::get('/admin/restore/{id}', [AdminProductController::class, 'restoreProduct'])->name('restore.product')->middleware('reject');
+
 ////////Basket Routes///////////
 //Route to get a specific basket
 Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket')->middleware(['auth', 'ensure.id']);
