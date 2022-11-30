@@ -9,10 +9,10 @@
 <h1>About Us</h1>
 </div>
 <div class="textSplit">
-    <h4>We are a small ecommerce business from Aston, Birmingham. Our vision at Hardware 28 is to ensure that we deliver high quality computer hardware. </h4>
+   <h4>We are Hardware28, a small E-Commerce company based in Aston, Birmingham. At Hardware28, we aim to sell the best quality of computer components at the cheapest price possible.</h4>
 </div>
 <div class="textSplit2">
-        <h4>At hardware 28, we are big gamers that aspire to have a competitive advantage whilst gaming so having the correct hardware to allow us to do so was always our priority.  It's now our priority to ensure that our customers can have the same experience hence why we started this business.</h4>
+        <h4>At Hardware28, we like to indulge in games ourselves and have always had problems acquiring the latest hardware, not only because of availability but also because of their prices. With Hardware28 we aim to achieve that our customers will never have issues finding hardware for their computers, which is why we started this company.</h4>
 </div>
 <div class="imageContainer">
 
