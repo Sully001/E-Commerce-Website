@@ -1,5 +1,7 @@
 body {
     box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
 }
 
@@ -69,3 +71,11 @@ body {
     border: 3px solid black;
 }
 
+.image-div {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 2px;
+}

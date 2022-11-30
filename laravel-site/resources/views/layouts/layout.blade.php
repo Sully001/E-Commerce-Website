@@ -27,8 +27,10 @@
     <body>
         
         <div class="navbar bg-dark">
-            
-            <a href="/welcome" class="unique"><p class="name" id="site-name">Hardware28</p></a>    
+            <a href="/welcome" class="unique image-div">
+                <img src="/images/h28.png" alt="Logo" width="20px" height="20px" class="logo">
+                <p class="name" id="site-name">Hardware28</p>
+            </a>    
             <ul class="navbar-options">
                 <li><a href="{{ route('products.index') }}">Products</a></li>
                 <li><a href="/about">About</a></li>
