@@ -42,7 +42,7 @@
 
                         <div class="price-stock">
                             <p class="bold">Price: £{{$product['price']}}</p>
-                            <p class="bold">Quantity - {{$product['quantity']}}</p>
+                            <p class="bold">Quantity: {{$product['quantity']}}</p>
                             <div class="stock-check">
                                 <p>In Stock</p>
                             </div>
