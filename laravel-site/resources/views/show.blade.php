@@ -50,7 +50,7 @@
         </div>
         
         <div class="section-right">
-            <h4>Features</h4>
+            <h4><strong>Features</strong></h4>
             <p>{{ $product->Description }}</p>
 
             @if ($product->Quantity > 0)
