@@ -50,8 +50,13 @@ class AdminProductController extends Controller
         $product->Description = request('description');
         $product->CategoryName = request('categories');
 
-        $path = $request->file('image')->store('images');
-        $product->ImageURL = $path;
+        if($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images',$filename);
+            $product->ImageURL = $filename;
+        }
         $product->save();
         Session::flash('store_product', 'Product Succesfully Created');
         return redirect('admin/dashboard');
@@ -75,12 +80,12 @@ class AdminProductController extends Controller
         $product->Description = request('description');
         $product->CategoryName = request('categories');
 
-        if (request()->allFiles()) {
-            if (Storage::disk('local')->exists($product->ImageURL)) {
-                Storage::disk('local')->delete($product->ImageURL);
-            }
-            $path = $request->file('image')->store('images');
-            $product->ImageURL = $path;
+        if($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalName();
+            $filename = $extension;
+            $file->move('images',$filename);
+            $product->ImageURL = $filename;
         }
 
         $product->save();

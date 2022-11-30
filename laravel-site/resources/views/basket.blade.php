@@ -32,8 +32,8 @@
                 @foreach($productsInfo as $product)
                     <div class="individual-item">
                         <div class="image-text-container">
-                            <img src="{{ asset('storage/'.$product['image']) }}" 
-                                alt="Image" width="70px" height="70px">
+                            <img src="/images/{{$product['image']}}" 
+                                alt="Image" width="130px" height="130px">
                             <div class="name-item-num">
                                 <p class="bold">{{$product['name']}}</p>
                                 <p class="bold">Product Number: {{$product['id']}}</p>
@@ -70,7 +70,7 @@
                     <input type="hidden" name="userid" value="{{ auth()->user()->id }}">
                     <button class="btn btn-info checkout">
                         <p class="checkout-txt">Checkout</p>
-                        <img class="cart-image" src="/images/shopping-cart.png" alt="Image of cart" height="15px" width="15px">
+                        <img class="cart-image" src="/images/shopping-cart(1).png" alt="Image of cart" height="15px" width="15px">
                     </button>
                 </form>
             </div>

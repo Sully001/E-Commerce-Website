@@ -46,7 +46,7 @@
                     <label for="image-preview" class="form-label mt-3">
                         <strong>Preview of Current Image in the Database</strong><br> 
                         <em>Only Upload a File if You wish to change the Image</em></label><br>
-                    <img src="{{ asset('storage/'.$product->ImageURL)}}" alt="Image for Product" height="100" 
+                    <img src="/images/{{$product->ImageURL}}" alt="Image for Product" height="100" 
                     width="100px" id="image-preview">
 
                     <div class="mb-4 mt-5 text-center">

@@ -23,7 +23,7 @@
         <tbody>
             @for ($i = 0; $i < count($orderDetails); $i++)
             <tr>
-                <th scope="row"><img src="{{ asset('storage/'.$orderDetails[$i]['image'])}}" 
+                <th scope="row"><img src="/images/{{$orderDetails[$i]['image']}}" 
                     alt="Product Image" width="100px" height="100px"></th>
                 <th scope="row">{{ $orderDetails[$i]['productid']}}</th>
                 <th scope="row">{{ $orderDetails[$i]['name']}}</th>

@@ -26,7 +26,7 @@
     <p class="product-name">{{$product->ProductName}}</p>
     <div class="product-main">
         <div class="section-left">
-            <img src="{{ asset('storage/'.$product->ImageURL) }}" alt="Product Image" height="200px" width="200px">
+            <img src="/images/{{$product->ImageURL}}" alt="Product Image" height="200px" width="200px">
             <h4 class="price">Price: £{{ $product->Price }}</h4>
             <div class="add-payment-options">
                 <form action="{{ route('basket.add')}}" method="POST">

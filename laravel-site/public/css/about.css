@@ -52,3 +52,7 @@ h4{
     height: auto
   }
 }
+
+body {
+  overflow-x: hidden;
+}
