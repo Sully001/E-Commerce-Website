@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('Quantity');
             $table->string('CategoryName');
             $table->string('ImageURL');
+            $table->softDeletes();
         });
     }
 

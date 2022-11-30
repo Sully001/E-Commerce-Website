@@ -36,7 +36,7 @@ class PreviousOrderController extends Controller
         //Now pull all order details for that order
         $orderDetails = [];
         for ($i = 0; $i < count($products); $i++) {
-            $product = Product::where('ProductID', $products[$i])->get();
+            $product = Product::withTrashed()->where('ProductID', $products[$i])->get();
             array_push($orderDetails, [
                 'productid' => $product[0]['ProductID'],
                 'name' => $product[0]['ProductName'],

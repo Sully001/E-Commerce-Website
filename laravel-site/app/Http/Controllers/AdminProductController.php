@@ -44,14 +44,11 @@ class AdminProductController extends Controller
 
     //Deleting Product Data
     public function destroy($id) {
+        //1. Delete the product from the table
         $product = Product::findOrFail($id);
-        //1. Delete the image of the product in the storage
-        if (Storage::disk('local')->exists($product->ImageURL)) {
-            Storage::disk('local')->delete($product->ImageURL);
-            $product->delete();
-            Session::flash('delete_product', 'Product Succesfully Deleted');
-        }
-        //2. Delete the product from the table
+        $product->delete();
+        Session::flash('delete_product', 'Product Succesfully Deleted');
+        
         return redirect('/admin/dashboard');
     }
 
