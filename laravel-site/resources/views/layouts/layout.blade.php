@@ -48,6 +48,9 @@
                     </button>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ route('previous.orders', auth()->user()->id) }}">Previous Orders</a>
+                      @if(auth()->user()->admin === "Admin")
+                      <a class="dropdown-item" href="/admin/dashboard">Admin Dashboard</a>
+                      @endif 
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/logout">Logout</a>
                     </div>
