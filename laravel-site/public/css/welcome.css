@@ -1,12 +1,11 @@
 .Welcome {
   display: flex;
   justify-content: center; 
+  align-items: center; 
+  margin-top: 330px;
   align-items: center;  
   padding: 10px;
 }
-
-
-
 
 productRedirect{ 
   display: flex;
