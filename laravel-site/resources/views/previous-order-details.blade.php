@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <div class="all-products-div">
-        <h1 class="all-products-title">Details For Order</h1>
-    </div>
+<div class="text-center">
+    <h1 class="order-title">Order Details</h1>
+</div>
     <div class="order-details">
         <table class="table table-striped ">
         <thead>

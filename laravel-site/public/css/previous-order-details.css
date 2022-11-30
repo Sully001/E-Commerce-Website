@@ -6,3 +6,7 @@ body {
 .order-details {
     margin: 20px;
 }
+
+.order-title {
+    font-weight: bold;
+}
