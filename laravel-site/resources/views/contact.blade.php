@@ -25,7 +25,7 @@
     </div>
     <div class="address">
         <a href="https://www.aston.ac.uk/" style="text-decoration: none; color: #000;">
-            <img class="img" id="img3" src="/images/location-favicon.png">
+            <img class="img" id="img3" src="/images/location-image.png">
         </a>
         <p>Aston St, Birmingham B4 7ET</p>
     </div>
