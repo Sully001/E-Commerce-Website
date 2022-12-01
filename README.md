@@ -69,3 +69,10 @@ Next run the command `php artisan migrate:refresh --seed`
 </ul>
 ------------------------------------------------------------------------------------------------
 
+<h2>Second Admin Account Access</h2>
+<ul>
+    <li>Email: admin@admin.com</li>
+    <li>Password: admin</li>
+</ul>
+
+
