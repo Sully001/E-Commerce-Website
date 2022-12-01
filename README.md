@@ -13,5 +13,5 @@ Users can deleted items from their basket
 Users can checkout
 
 <ul>
-  <li>sers can create accounts and login/logout of the site </>
+  <li>Users can create accounts and login/logout of the site </li>
 </ul>
