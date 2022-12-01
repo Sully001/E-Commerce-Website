@@ -43,12 +43,12 @@ Users can checkout
   <li>
     Make sure that your database variables are correct.
         <ul>
-            <li>`DB_CONNECTION=mysql`</li>
-            <li>`DB_HOST=localhost`</li>
-            <li>`DB_PORT=3306`</li>
-            <li>`DB_DATABASE=laravel_site`</li>
-            <li>`DB_USERNAME=root`</li>
-            <li>`DB_PASSWORD=''`</li>
+            `<li>DB_CONNECTION=mysql</li>`
+            `<li>DB_HOST=localhost</li>`
+            `<li>DB_PORT=3306</li>`
+            `<li>DB_DATABASE=laravel_site</li>`
+            `<li>DB_USERNAME=root</li>`
+            `<li>DB_PASSWORD=''</li>`
         </ul>
   </li>
 </ol>
