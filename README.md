@@ -6,7 +6,7 @@ Hardware 28 is an online e-commerce website dedicated to bring the best PC hardw
 
 -------------------------------------------------------------------------------------------------
 
-<h1>Website Feature</h1>
+<h2>Website Features</h2>
 - Users can create accounts and login/logout of the site 
 - Products are listed and are available to be added to a user's basket
 - Users can deleted items from their basket
