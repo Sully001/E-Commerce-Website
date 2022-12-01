@@ -39,16 +39,32 @@ Users can checkout
   <li>Make sure that XAMPP is installed on your local machine</li>
   <li>Make sure that Composer is installed as well</li>
   <li>Clone this Github repo</li>
-  <li>Change the filename of `example.env` => `env`</li>
+  <li>Change the filename of (example.env) => (env)</li>
   <li>
     Make sure that your database variables are correct.
         <ul>
-            `<li>DB_CONNECTION=mysql</li>`
-            `<li>DB_HOST=localhost</li>`
-            `<li>DB_PORT=3306</li>`
-            `<li>DB_DATABASE=laravel_site</li>`
-            `<li>DB_USERNAME=root</li>`
-            `<li>DB_PASSWORD=''</li>`
+            <li>DB_CONNECTION=mysql</li>
+            <li>DB_HOST=localhost</li>
+            <li>DB_PORT=3306</li>
+            <li>DB_DATABASE=laravel_site</li>
+            <li>DB_USERNAME=root</li>
+            <li>DB_PASSWORD=''</li>
         </ul>
   </li>
 </ol>
+
+Next run the command `php artisan migrate:refresh --seed`
+1. `Move into the laravel-site directory`
+2. Run command `composer install` in the terminal
+3. `php artisan key:generate`
+4. `php artisan serve`
+5. Open the website in your browser `http://127.0.0.1:8000`
+
+------------------------------------------------------------------------------------------------
+
+<h2>Admin Access</h2>
+<ul>
+    <li>Email:</li>`test@example.com`
+    <li>Password:</li>`test`
+
+</ul>
