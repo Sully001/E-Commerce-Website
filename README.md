@@ -64,7 +64,8 @@ Next run the command `php artisan migrate:refresh --seed`
 
 <h2>Admin Access</h2>
 <ul>
-    <li>Email:`test@example.com`</li>
-    <li>Password:</li>`test`
-
+    <li>Email: test@example.com</li>
+    <li>Password: test</li>
 </ul>
+------------------------------------------------------------------------------------------------
+
