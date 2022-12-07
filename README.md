@@ -65,14 +65,14 @@ first admin at the bottom of this file
 
 ------------------------------------------------------------------------------------------------
 
-<h2>Admin Access</h2>
+<h2>Master Admin Access (Works on Local Host and the Deployed Site)</h2>
 <ul>
     <li>Email: test@example.com</li>
     <li>Password: test</li>
 </ul>
 ------------------------------------------------------------------------------------------------
 
-<h2>Second Admin Account Access</h2>
+<h2>Second Admin Account Access (Works on the Deployed Site)</h2>
 <ul>
     <li>Email: admin@admin.com</li>
     <li>Password: admin</li>
