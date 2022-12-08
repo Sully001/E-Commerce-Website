@@ -66,7 +66,7 @@ first admin at the bottom of this file
 ------------------------------------------------------------------------------------------------
 
 <h2>Master Admin Access (Works on Local Host and the Deployed Site)</h2>
-Make sure to run the `php artisan migrate:refresh --seed`. If you're working locally (no need to do this if you're using the deployed site)
+Make sure to run the `php artisan migrate:refresh --seed` if you're working locally. (No need to do this if you're using the deployed site)
 <ul>
     <li>Email: test@example.com</li>
     <li>Password: test</li>
