@@ -59,7 +59,7 @@ first admin at the bottom of this file
 
 1. `Move into the laravel-site directory`
 2. Run command `composer install` in the terminal
-2.1 Make sure to run the command `php artisan migrate:refresh --seed`
+2.1. Make sure to run the command `php artisan migrate:refresh --seed`
 This will automatically create an admin account for you, which is the 
 first admin at the bottom of this file
 3. `php artisan key:generate`
